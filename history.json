@@ -87,7 +87,7 @@
   "date": "2026-09-28",
   "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
   "category": "과학·자연",
-  "media": "20260928-hiccup.mp4",
+  "media": "",
   "sources": [
    "Cleveland Clinic — Hiccups",
    "StatPearls NBK538225 — Hiccups",
@@ -95,6 +95,21 @@
    "UCL News 2019 — newborn hiccups & brain development",
    "BJGP 2016 — hiccups review"
   ],
-  "topic_no": 2
+  "topic_no": 2,
+  "note": "보류: 몸속을 그려야 해서 영상 기준에 안 맞음 (2026-09-28 그림자로 교체)"
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 얘가 자꾸 나 따라와!",
+  "category": "과학·자연",
+  "media": "20260928-shadow-follows.mp4",
+  "sources": [
+   "NZ Science Learning Hub — Light and shadows",
+   "EBSCO Research Starters — Shadow",
+   "Exploratorium — Outdoor Shadows",
+   "California Academy of Sciences — Which way is north (shadow length)",
+   "UIUC Physics Van — multiple light sources, multiple shadows"
+  ],
+  "topic_no": 3
  }
 ]
