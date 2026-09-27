@@ -67,5 +67,34 @@
    "한국민족문화대백과사전 — 귀뚜라미",
    "Old Farmer's Almanac / ScienceABC — Dolbear's law"
   ]
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
+  "category": "과학·자연",
+  "media": "20260928-wrinkly-fingers.mp4",
+  "sources": [
+   "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
+   "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
+   "Haseleu et al. 2014 PLOS One (재현 실패)",
+   "Davis 2021 PLOS One (악력 감소 재지지)",
+   "Cleveland Clinic — Why water makes your skin look like a prune",
+   "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
+  ],
+  "topic_no": 1
+ },
+ {
+  "date": "2026-09-28",
+  "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
+  "category": "과학·자연",
+  "media": "20260928-hiccup.mp4",
+  "sources": [
+   "Cleveland Clinic — Hiccups",
+   "StatPearls NBK538225 — Hiccups",
+   "Merck Manual — Hiccups",
+   "UCL News 2019 — newborn hiccups & brain development",
+   "BJGP 2016 — hiccups review"
+  ],
+  "topic_no": 2
  }
 ]
