@@ -202,24 +202,26 @@ def hg_s2(i, n):
                 d.rounded_rectangle([bx0, by0, bx1, by1], radius=10, outline=INK, width=22)
         fade_pill(im, '음~  다문 입', (cx, 860), LT, min(1, max(0, (t-0.4)/0.5))*(1 if t < 4.6 else max(0, (5.2-t)/0.6)))
     else:
-        u = t-5.2; k = ease((u-0.2)/1.2); face(d, cx, cy, mouth=0.35, teeth=k)
+        u = t-5.2; k = ease((u-0.2)/1.2); face(d, cx, cy, mouth=0.35+0.65*k)   # 아~ 크게 벌림
         d.rounded_rectangle([700, 380, 960, 640], radius=10, outline=INK, width=22)
-        mh = 10+110*0.35; ty = cy+120-mh+10  # 이 윗선
+        mh = 10+110*(0.35+0.65*k)
+        # 벌린 입 속 동그란 목구멍
+        tr = int(46*k); tcx, tcy = cx, cy+120+int(mh*0.25)
+        if tr > 0: d.ellipse([tcx-tr, tcy-tr, tcx+tr, tcy+tr], fill=(110, 60, 70))
         tk = ease((u-1.5)/1.6)
-        tooth_cx = cx+16; tooth_cy = ty+30
-        if tk > 0: trace_siot(d, tooth_cx, tooth_cy, 44, tk, LT, w=14)               # 이 하나 따라 ㅅ
+        if tk > 0: d.arc([tcx-tr-10, tcy-tr-10, tcx+tr+10, tcy+tr+10], -90, -90+int(360*tk), fill=LT, width=14)   # 목구멍 따라 ㅇ
         sk = ease((u-3.3)/1.2)
         if sk > 0:
-            sx = tooth_cx+(830-tooth_cx)*sk; sy = tooth_cy+(800-tooth_cy)*sk; size = 44+(95-44)*sk
-            trace_siot(d, sx, sy, size, 1, mix(LT, INK, sk), w=int(14+10*sk))
-        fade_pill(im, '스~  이가 보여', (cx, 860), LM, min(1, max(0, (u-0.2)/0.5)))
+            r = (tr+10)+(105-(tr+10))*sk; ox = tcx+(830-tcx)*sk; oy = tcy+(800-tcy)*sk
+            d.ellipse([ox-r, oy-r, ox+r, oy+r], outline=mix(LT, INK, sk), width=int(14+8*sk))
+        fade_pill(im, '아~  동그란 목구멍', (cx, 900), LM, min(1, max(0, (u-0.2)/0.5)))
     return im
 def hg_sounds(total, sr):
     y = np.zeros(int(sr*total)); base = HG1/F-1.0
     t0 = base+0.6; n = int(sr*1.4); tt = np.arange(n)/sr
     y[int(sr*t0):int(sr*t0)+n] += (0.18*np.sin(2*np.pi*165*tt)+0.08*np.sin(2*np.pi*330*tt))*env(sr, n, 0.15, 0.3)
-    t1 = base+5.4; n = int(sr*1.2); rng = np.random.default_rng(1); noise = np.convolve(rng.normal(0, 1, n), np.ones(6)/6, mode='same')
-    y[int(sr*t1):int(sr*t1)+n] += 0.06*noise*env(sr, n, 0.2, 0.4)
+    t1 = base+5.6; n = int(sr*1.4); tt = np.arange(n)/sr
+    y[int(sr*t1):int(sr*t1)+n] += (0.16*np.sin(2*np.pi*220*tt)+0.07*np.sin(2*np.pi*440*tt)+0.04*np.sin(2*np.pi*660*tt))*env(sr, n, 0.15, 0.3)
     return y
 
 if __name__ == '__main__':
