@@ -171,20 +171,47 @@ def face(d, cx, cy, mouth, teeth=0.0, close=0.0):
             for k in range(n):
                 x = cx-96+k*192/n; d.rounded_rectangle([x+3, cy+120-mh+10, x+192/n-3, cy+120-mh+10+th], radius=8, fill=TEETH)
 HG2 = 11*F
+def trace_rect(d, box, k, col, w=16):
+    x0, y0, x1, y1 = box; per = 2*((x1-x0)+(y1-y0)); L = k*per
+    segs = [((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)), ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))]
+    for (a, b) in segs:
+        sl = math.dist(a, b)
+        if L <= 0: break
+        f = min(1, L/sl); d.line([a, (a[0]+(b[0]-a[0])*f, a[1]+(b[1]-a[1])*f)], fill=col, width=w); L -= sl
+def trace_siot(d, cx, cy, size, k, col, w=16):
+    # ㅅ: 꼭짓점에서 양쪽 다리로
+    top = (cx, cy-size); l = (cx-size*0.7, cy+size); r = (cx+size*0.7, cy+size)
+    f1 = min(1, k*2); f2 = min(1, max(0, k*2-1))
+    if f1 > 0: d.line([top, (top[0]+(l[0]-top[0])*f1, top[1]+(l[1]-top[1])*f1)], fill=col, width=w)
+    if f2 > 0: d.line([top, (top[0]+(r[0]-top[0])*f2, top[1]+(r[1]-top[1])*f2)], fill=col, width=w)
 def hg_s2(i, n):
     t = i/F; im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
-    d.text((W/2, 80), '입을 크게 보면', font=FBW, fill=TXT, anchor='mm')
+    d.text((W/2, 80), '거울 앞에서', font=FBW, fill=TXT, anchor='mm')
     cx, cy = 360, 500
-    if t < 5:   # 음~ : 입 다물기 → ㅁ
-        k = ease((t-0.5)/1.5); face(d, cx, cy, mouth=0.5*(1-k), close=1 if t > 2.0 else 0)
-        a = ease((t-1.8)/1.0)
-        if a > 0: d.rounded_rectangle([700, 380, 700+int(260*a), 640], radius=10, outline=mix(BG, INK, a), width=22)
-        fade_pill(im, '음~  다문 입', (cx, 860), LT, min(1, max(0, (t-0.4)/0.5))*(1 if t < 4.4 else max(0, (5-t)/0.6)))
-    else:       # 스~ : 이 보이기 → ㅅ
-        u = t-5; k = ease((u-0.3)/1.5); face(d, cx, cy, mouth=0.35, teeth=k)
+    if t < 5.2:
+        k = ease((t-0.3)/1.2); closed = t > 1.5
+        face(d, cx, cy, mouth=0.5*(1-k), close=1 if closed else 0)
+        if closed:
+            d.rounded_rectangle([cx-110, cy+100, cx+110, cy+140], radius=18, fill=LIP)   # 다문 입술
+            tk = ease((t-1.6)/1.8)
+            box = [cx-118, cy+92, cx+118, cy+148]
+            if tk > 0: trace_rect(d, box, tk, INK)                                      # 입 따라 ㅁ 그리기
+            sk = ease((t-3.6)/1.2)
+            if sk > 0:  # 그려진 ㅁ이 옆으로 옮겨가며 정사각형 글자로
+                bx0 = box[0]+(700-box[0])*sk; bx1 = box[2]+(960-box[2])*sk; by0 = box[1]+(380-box[1])*sk; by1 = box[3]+(640-box[3])*sk
+                d.rounded_rectangle([bx0, by0, bx1, by1], radius=10, outline=INK, width=22)
+        fade_pill(im, '음~  다문 입', (cx, 860), LT, min(1, max(0, (t-0.4)/0.5))*(1 if t < 4.6 else max(0, (5.2-t)/0.6)))
+    else:
+        u = t-5.2; k = ease((u-0.2)/1.2); face(d, cx, cy, mouth=0.35, teeth=k)
         d.rounded_rectangle([700, 380, 960, 640], radius=10, outline=INK, width=22)
-        a = ease((u-1.6)/1.0)
-        if a > 0: d.text((830, 800), 'ㅅ', font=FH, fill=mix(BG, INK, a), anchor='mm')
+        mh = 10+110*0.35; ty = cy+120-mh+10  # 이 윗선
+        tk = ease((u-1.5)/1.6)
+        tooth_cx = cx+16; tooth_cy = ty+30
+        if tk > 0: trace_siot(d, tooth_cx, tooth_cy, 44, tk, LT, w=14)               # 이 하나 따라 ㅅ
+        sk = ease((u-3.3)/1.2)
+        if sk > 0:
+            sx = tooth_cx+(830-tooth_cx)*sk; sy = tooth_cy+(800-tooth_cy)*sk; size = 44+(95-44)*sk
+            trace_siot(d, sx, sy, size, 1, mix(LT, INK, sk), w=int(14+10*sk))
         fade_pill(im, '스~  이가 보여', (cx, 860), LM, min(1, max(0, (u-0.2)/0.5)))
     return im
 def hg_sounds(total, sr):
