@@ -126,5 +126,40 @@
    "Sci Rep 2018 — eyeshine only when dark-adapted"
   ],
   "topic_no": 14
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 빨대 부러졌어!",
+  "category": "과학·자연",
+  "media": "20260929-straw.mp4",
+  "sources": [
+   "IOP Spark — Reappearing coin",
+   "IOP — Vanishing coin"
+  ]
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 모기는 왜 나만 물어?",
+  "category": "과학·자연",
+  "media": "20260929-mosquito.mp4",
+  "sources": [
+   "Rockefeller Univ — Why mosquitoes bite some people more (2022)",
+   "Cell 2022 De Obaldia et al.",
+   "NIH Research Matters",
+   "EPA — Mosquito life cycle",
+   "Pitt Immunology — why bites itch"
+  ]
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 풍선 날아갔어! 하늘 끝까지 가?",
+  "category": "과학·자연",
+  "media": "20260929-balloon.mp4",
+  "sources": [
+   "BalloonHQ — release study (Burchette)",
+   "UCAR — weather balloons",
+   "Sci Rep 2019 — marine debris seabirds",
+   "CPSC — latex balloon choking"
+  ]
  }
 ]
