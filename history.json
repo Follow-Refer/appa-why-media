@@ -72,7 +72,7 @@
   "date": "2026-09-28",
   "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
   "category": "과학·자연",
-  "media": "20260928-wrinkly-fingers.mp4",
+  "media": "",
   "sources": [
    "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
    "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
@@ -81,7 +81,8 @@
    "Cleveland Clinic — Why water makes your skin look like a prune",
    "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
   ],
-  "topic_no": 1
+  "topic_no": 1,
+  "note": "보류: 손가락 속 단면을 그려야 해서 영상 기준에 안 맞음 (고양이 눈으로 교체)"
  },
  {
   "date": "2026-09-28",
@@ -111,5 +112,19 @@
    "UIUC Physics Van — multiple light sources, multiple shadows"
   ],
   "topic_no": 3
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 고양이 눈에 불 켜졌어!",
+  "category": "과학·자연",
+  "media": "20260928-cat-eyes.mp4",
+  "sources": [
+   "Texas Parks & Wildlife — Eyeshine",
+   "The Conversation — Why do cats' eyes glow in the dark",
+   "Wikipedia — Tapetum lucidum / Cat senses",
+   "Panthera — Spooky science: glowing eyes of cats",
+   "Sci Rep 2018 — eyeshine only when dark-adapted"
+  ],
+  "topic_no": 14
  }
 ]
