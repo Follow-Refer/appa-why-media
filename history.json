@@ -8,5 +8,52 @@
       "NASA Science — Moon: Earth-Moon distance about 384,400 km",
       "시차(parallax) 원리 — 천문학 교과 개념"
     ]
+  },
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 나뭇잎이 왜 빨개지고 노래져?",
+    "category": "과학·자연",
+    "media": "20260927-autumn-leaves.mp4",
+    "sources": [
+      "USDA Forest Service — Science of Fall Colors (https://www.fs.usda.gov/visit/fall-colors/science-of-fall-colors)",
+      "Iowa State Univ. Extension — The Science Behind Fall Color (https://yardandgarden.extension.iastate.edu/how-to/science-behind-fall-color)",
+      "Ohio State Univ. Ohioline — Fall Color (https://ohioline.osu.edu/factsheet/anr-0145)",
+      "NASA Earthdata — Why Do Leaves Change Color? (https://www.earthdata.nasa.gov/learn/data-in-action/why-do-leaves-change-color)",
+      "UC ANR — Fall colors (https://ucanr.edu/blog/real-dirt/article/fall-colors)",
+      "Morton Arboretum — Seasonal needle drop (https://mortonarb.org/plant-and-protect/tree-plant-care/plant-care-resources/seasonal-needle-drop/)",
+      "경향신문 2023-11-22 은행잎 단풍·떨켜 (https://www.khan.co.kr/national/national-general/article/202311222120025)"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "question": "엄마, 한글은 누가 만들었어?",
+    "category": "역사·문화",
+    "media": "20260927-hangeul-shapes.mp4",
+    "sources": [
+      "국립한글박물관 웹진 — 한글날이 10월 9일인 이유 (https://www.hangeul.go.kr/webzine/201810/sub1_1.html)",
+      "국립한글박물관 웹진 — 제자 원리 (https://www.hangeul.go.kr/webzine/202010/sub1_3.html)",
+      "한국민족문화대백과 — 훈민정음 (https://encykorea.aks.ac.kr/Article/E0065805)",
+      "국가기록원 — 한글날 (https://theme.archives.go.kr/next/specialDay/subInfo.do?specialDayId=00000067)",
+      "경향신문 2019-11-05 해례본 1940년 안동 발견 (https://www.khan.co.kr/article/201911050500001)",
+      "동아일보 2025-10-09 왜 한글날은 10월 9일? (https://v.daum.net/v/20251009090213399)",
+      "한글학회 — 사라진 글자 (https://www.urimal.org/1416)"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 돈은 누가 만들어?",
+    "category": "생활 경제",
+    "media": "20260927-money-journey.mp4",
+    "sources": [
+      "한국은행 — 화폐는 어떻게 사람들 손에 들어올까 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10085714&menuNo=200387)",
+      "한국은행 — 한국은행법을 통해 살펴보는 우리나라 화폐 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10067510&menuNo=200387)",
+      "KTV — 제조에서 폐기까지 돈의 일생 (https://www.ktv.go.kr/content/view?content_id=310402)",
+      "프라임경제 — 조폐공사 부여 제지본부 르포 (https://www.newsprime.co.kr/news/article/?no=333871)",
+      "이투데이 — 조폐공사 경산 화폐본부 르포 (https://www.etoday.co.kr/news/view/1243651)",
+      "경향신문 2019-06-19 조폐공사 (https://www.khan.co.kr/economy/economy-general/article/201906192115005)",
+      "서울신문 2026-01-13 손상화폐 폐기·교환 기준 (https://www.seoul.co.kr/news/economy/finance/2026/01/13/20260113500273)",
+      "KTV 카드뉴스 — 손상 화폐 폐기 (https://m.ktv.go.kr/program/again/view?content_id=515740)",
+      "이데일리 2023 — 손상 지폐 대부분 소각 (https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02036886635774232)"
+    ]
   }
 ]
