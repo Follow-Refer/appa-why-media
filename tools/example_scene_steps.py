@@ -37,17 +37,17 @@ def drops(d,phase,t):
             x=x0
         d.ellipse([x-17,y0-20,x+17,y0+14],fill=(255,255,255),outline=(222,140,110),width=4)
     d.text((DROPS[0][0]-10,DROPS[0][1]-50),'단물',font=FN,fill=(200,120,95),anchor='mm')
-STEPS=['밤이 길어지면 초록이 빠져요','숨어 있던 노랑이 보여요','잎자루 문이 닫혀요*','갇힌 단물로 빨강을 새로 만들어요']
-def steps_panel(d,active,shown):
-    for k,s in enumerate(STEPS):
-        if k>=shown: break
-        y=680+k*62
-        on=(k==active)
-        d.rounded_rectangle([130,y-26,950,y+26],radius=26,fill=(255,255,255) if on else (246,244,250),
-                            outline=(222,140,110) if on else None,width=3)
-        d.ellipse([145,y-19,183,y+19],fill=(222,140,110) if on else (200,196,210))
-        d.text((164,y),str(k+1),font=FN,fill=(255,255,255),anchor='mm')
-        d.text((205,y),s,font=FN,fill=TXT if on else (150,146,160),anchor='lm')
+STEPS=['밤이 길어지면 초록이 빠져요','그러면 숨어 있던 노랑이 보여요','잎자루에 문이 닫혀요*','갇힌 단물로 빨강을 새로 만들어요']
+CAP_POS=[(540,660),(540,660),(760,640),(540,660)]
+def caption(im,text,xy,alpha):
+    if alpha<=0: return
+    layer=Image.new('RGBA',im.size,(0,0,0,0)); d=ImageDraw.Draw(layer)
+    w=d.textlength(text,font=FN); x,y=xy
+    x=min(max(x,w/2+40),W-w/2-40)
+    a=int(255*alpha)
+    d.rounded_rectangle([x-w/2-26,y-34,x+w/2+26,y+34],radius=34,fill=(255,255,255,a))
+    d.text((x,y),text,font=FN,fill=TXT+(a,),anchor='mm')
+    im.paste(Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB'))
 # timeline (frames @24fps)
 F=24
 seg=[('g',3*F),('hold1',2*F),('y',1*F),('hold2',2*F),('c',2*F),('hold3',2*F),('r',3*F),('end',4*F)]
@@ -86,7 +86,22 @@ def s2(i,n):
     if name in ('c','hold3'): drops(d,'c' if name=='c' else 'hold',t)
     if idx>=order.index('c'):
         d.text((540,1045),"*잎자루 끝에 생기는 이 막을 '떨켜'라고 해요",font=FT,fill=(140,136,150),anchor='mm')
-    steps_panel(d,active,active+1)
+    # 한 번에 한 문장만, 그림 가까이에 부드럽게 나타났다 사라짐
+    first={'g':'g','hold1':'g','y':'y','hold2':'y','c':'c','hold3':'c','r':'r','end':'r'}[name]
+    acc=0; start=0
+    for nm,nn in seg:
+        if nm==first: start=acc; break
+        acc+=nn
+    local=(i-start)/F
+    alpha=min(1,local/0.8)
+    nxt={'g':'y','y':'c','c':'r','r':None}[first]
+    if nxt:
+        acc=0
+        for nm,nn in seg:
+            if nm==nxt: nstart=acc; break
+            acc+=nn
+        alpha=min(alpha,max(0,(nstart-i)/(0.5*F)))
+    caption(im,STEPS[active].replace('*','*') ,CAP_POS[active],alpha)
     return im
 def s1(i,n):
     t=ease(i/(5*F))
