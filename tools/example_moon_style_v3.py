@@ -412,3 +412,330 @@ def bs_s2(i, n):
     return im
 if __name__ == '__main__' and sys.argv[1] == 'bluesky':
     build('bluesky', bs_s1, BS_1, bs_s2, BS_2, sys.argv[2], preview=[(bs_s1, int(3*F), BS_1), (bs_s2, int(2*F), BS_2), (bs_s2, int(5*F), BS_2), (bs_s2, int(9*F), BS_2)])
+
+# ================= 공통 =================
+def bubble(im, text, xy, a=1.0, size=1.0):
+    if a <= 0: return
+    f = ImageFont.truetype('/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc', int(56*size), index=1)
+    def dr(dd):
+        w = dd.textlength(text, font=f); x, y = xy
+        dd.rounded_rectangle([x-w/2-30*size, y-50*size, x+w/2+30*size, y+50*size], radius=int(40*size), fill=(255, 255, 255, int(255*a)))
+        dd.text((x, y), text, font=f, fill=TXT+(int(255*a),), anchor='mm')
+    blend(im, dr)
+def dog(d, cx, gy, s=1.0, tongue=1.0, t=0):
+    B = (214, 170, 120); Bd = (180, 136, 90)
+    d.ellipse([cx-170*s, gy-190*s, cx+90*s, gy-40*s], fill=B)
+    for lx in (-130, -60, 20, 60): d.rounded_rectangle([cx+lx*s, gy-80*s, cx+(lx+34)*s, gy], radius=int(14*s), fill=B)
+    d.line([cx-160*s, gy-150*s, cx-230*s, gy-220*s+10*math.sin(t*12)*s], fill=B, width=int(26*s))
+    hx, hy = cx+110*s, gy-230*s
+    d.ellipse([hx-90*s, hy-80*s, hx+90*s, hy+80*s], fill=B)
+    d.ellipse([hx-110*s, hy-60*s, hx-50*s, hy+60*s], fill=Bd); d.ellipse([hx+50*s, hy-60*s, hx+110*s, hy+60*s], fill=Bd)
+    d.ellipse([hx-40*s, hy-30*s, hx-20*s, hy-10*s], fill=INK); d.ellipse([hx+20*s, hy-30*s, hx+40*s, hy-10*s], fill=INK)
+    d.ellipse([hx-18*s, hy+6*s, hx+18*s, hy+30*s], fill=(80, 70, 80))
+    if tongue > 0:
+        L = 50+40*tongue*(0.8+0.2*math.sin(t*14))
+        d.rounded_rectangle([hx-20*s, hy+36*s, hx+20*s, hy+(36+L)*s], radius=int(20*s), fill=(240, 130, 140))
+
+# ================= 1. 차 뒤로 =================
+ROAD = (150, 150, 160); CAR = (240, 200, 110); BUS = (120, 190, 150)
+CB1 = 7*F
+def cb_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (60, 60, 76)); d = ImageDraw.Draw(im)
+    d.rounded_rectangle([90, 200, 990, 800], radius=60, fill=(200, 220, 240))
+    bx = 1100 - ease((t-1.2)/5.0)*1500  # 버스가 창밖에서 왼쪽(앞)으로
+    d.rectangle([bx-40, 240, bx+1400, 780], fill=BUS)
+    for k in range(9): d.rounded_rectangle([bx+20+k*160, 290, bx+140+k*160, 470], radius=16, fill=(210, 236, 246))
+    for wx in (bx+200, bx+1100): d.ellipse([wx-70, 700, wx+70, 840], fill=(60, 60, 70))
+    d.rectangle([0, 0, W, 200], fill=(60, 60, 76)); d.rectangle([0, 800, W, H], fill=(60, 60, 76))
+    d.rounded_rectangle([90, 200, 990, 800], radius=60, outline=(90, 90, 110), width=26)
+    d.ellipse([700, 700, 1000, 1000], fill=SKIN); d.ellipse([740, 780, 780, 820], fill=INK)
+    d.text((W/2, 110), '우리 차 뒤로 가!', font=FBW, fill=(245, 245, 250), anchor='mm')
+    lab(im, '우리 차: 뒤로?!', (360, 880), LT, t, 2.2)
+    return im
+CB2 = 10*F
+def top_car(d, x, y, col, L=240, Wd=120):
+    d.rounded_rectangle([x-Wd/2, y-L/2, x+Wd/2, y+L/2], radius=30, fill=col)
+    d.rounded_rectangle([x-Wd/2+14, y-L/2+30, x+Wd/2-14, y-L/2+80], radius=10, fill=(210, 236, 246))
+def cb_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (190, 214, 170)); d = ImageDraw.Draw(im)
+    d.rectangle([260, 0, 820, H], fill=ROAD); d.line([(540, 0), (540, H)], fill=(250, 250, 250), width=8)
+    for y in range(0, H, 90): d.line([(540, y), (540, y+50)], fill=ROAD, width=10)
+    d.text((W/2, 80), '위에서 보면', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([260, 170, 820, 186], fill=(250, 250, 250))  # 정지선
+    top_car(d, 420, 520, CAR)
+    by = 620 - ease((t-1.5)/4.5)*700
+    top_car(d, 660, by, BUS, L=520, Wd=150)
+    wig = 0 if t < 6.5 else 0
+    lab(im, '우리 차: 그대로', (190, 520), LT, t, 1.0)
+    lab(im, '버스: 앞으로', (890, 420), LM, t, 2.4)
+    lab(im, '눈이 속았다!', (540, 960), LG, t, 6.4)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'car':
+    build('car', cb_s1, CB1, cb_s2, CB2, sys.argv[2], preview=[(cb_s1, int(1*F), CB1), (cb_s1, int(4*F), CB1), (cb_s2, int(3*F), CB2), (cb_s2, int(8*F), CB2)])
+
+# ================= 2. 구름 =================
+def cloud(d, cx, cy, s=1.0, col=(255, 255, 255)):
+    for dx, dy, r in ((0, 0, 110), (120, -40, 140), (260, 0, 110), (130, 50, 120), (-90, 30, 80), (350, 40, 80)):
+        d.ellipse([cx+(dx-r)*s, cy+(dy-r)*s, cx+(dx+r)*s, cy+(dy+r)*s], fill=col)
+CL1 = 7*F
+def cl_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.rectangle([0, 820, W, H], fill=PARK); d.text((W/2, 80), '구름은 왜 안 떨어져?', font=FBW, fill=TXT, anchor='mm')
+    cloud(d, 300+20*t, 330+6*math.sin(t*1.5), 1.1)
+    # 누운 아이 (옆모습)
+    d.ellipse([140, 760, 260, 880], fill=SKIN); d.rounded_rectangle([250, 780, 520, 860], radius=40, fill=(180, 200, 230))
+    d.line([(520, 800), (660, 800)], fill=SKIN, width=28); d.line([(520, 840), (660, 840)], fill=SKIN, width=28)
+    d.ellipse([190, 790, 206, 806], fill=INK)
+    lab(im, '물이 둥둥?', (820, 600), LT, t, 1.8)
+    return im
+CL2 = 10*F
+def cl_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (150, 180, 214), (214, 226, 240))
+    d.text((W/2, 80), '구름 속을 보면', font=FBW, fill=TXT, anchor='mm')
+    random.seed(5); drops = [(random.uniform(80, 1000), random.uniform(200, 760), random.uniform(0, 6)) for _ in range(90)]
+    merge = ease((t-5.0)/1.5)
+    tx, ty = 560, 520
+    for k, (x, y, ph) in enumerate(drops):
+        x += 10*math.sin(t*2+ph); y += 8*math.cos(t*1.7+ph)
+        if k < 14:
+            x = x+(tx-x)*merge; y = y+(ty-y)*merge
+            if merge >= 1: continue
+        d.ellipse([x-7, y-7, x+7, y+7], fill=(120, 170, 230))
+    # 위로 부는 바람
+    for k in range(5):
+        x0 = 150+k*190; ph = (t*0.6+k*0.2) % 1; y0 = 900-ph*500
+        pts = [(x0+18*math.sin((y0-yy)/40), yy) for yy in range(int(y0), int(y0)-160, -8)]
+        d.line(pts, fill=(250, 250, 255), width=8)
+    if merge >= 1:
+        u = t-6.5; y = ty+max(0, u-0.4)**2*380
+        d.polygon([(tx, y-60), (tx-36, y+10), (tx+36, y+10)], fill=(90, 140, 220)); d.ellipse([tx-38, y-14, tx+38, y+54], fill=(90, 140, 220))
+    lab(im, '물방울: 아주 작아', (300, 200), LM, t, 0.6)
+    lab(im, '바람: 위로 후~', (760, 900), LT, t, 2.5)
+    lab(im, '뭉치면: 비', (820, 560), LG, t, 6.6)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'cloud':
+    build('cloud', cl_s1, CL1, cl_s2, CL2, sys.argv[2], preview=[(cl_s1, int(3*F), CL1), (cl_s2, int(2*F), CL2), (cl_s2, int(5.8*F), CL2), (cl_s2, int(8*F), CL2)])
+
+# ================= 3. 머리카락 =================
+HAIR = (110, 84, 70)
+HC1 = 7*F
+def hc_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '잘라도 안 아파?', font=FBW, fill=TXT, anchor='mm')
+    cx, cy = 540, 520
+    cut = t > 3.0
+    # 머리카락 (옆머리 길게)
+    for k in range(9):
+        x = cx-220+k*55; L = 380 if not cut or k < 6 else 260
+        d.line([(x, cy-150), (x-10, cy-150+L)], fill=HAIR, width=34)
+    d.ellipse([cx-200, cy-230, cx+200, cy+200], fill=SKIN)
+    d.chord([cx-215, cy-250, cx+215, cy+60], 180, 360, fill=HAIR)
+    smile = 1 if t > 3.3 else 0
+    d.ellipse([cx-80, cy-20, cx-50, cy+10], fill=INK); d.ellipse([cx+50, cy-20, cx+80, cy+10], fill=INK)
+    d.arc([cx-50, cy+40, cx+50, cy+100], 20, 160, fill=LIP, width=8)
+    # 가위
+    sx = 930 - ease((t-1.0)/1.8)*140; op = abs(math.sin(t*8)) if t < 3.0 else 0.1
+    for sgn in (1, -1):
+        d.line([(sx, 700), (sx+140, 700+sgn*op*50)], fill=(170, 176, 190), width=16)
+        d.ellipse([sx+140-30, 700+sgn*op*50-26+sgn*30, sx+140+30, 700+sgn*op*50+26+sgn*30], outline=(236, 110, 110), width=10)
+    if cut:
+        u = t-3.0
+        for k in range(3):
+            x = cx+110+k*55; y = cy+110+u*300
+            if y < 980: d.line([(x-10, y), (x-16, y+110)], fill=HAIR, width=30)
+    lab(im, '싹둑: 안 아파', (300, 900), LG, t, 3.5)
+    return im
+HC2 = 10*F
+def hc_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '머리카락 한 올을 보면', font=FBW, fill=TXT, anchor='mm')
+    sk = 640
+    pull = ease((t-6.2)/0.6)*40*(1 if t < 8.5 else 0)
+    d.rectangle([0, sk, W, H], fill=(246, 214, 190))
+    # 뿌리: 살아 있어 (분홍 알뿌리 + 감긴 줄)
+    rx, ry = 540, sk+170-pull
+    glow = 0.6+0.4*abs(math.sin(t*3))
+    d.ellipse([rx-60, ry-60, rx+60, ry+60], fill=mix((246, 214, 190), (240, 150, 160), glow))
+    for k in range(3):
+        yy = ry-40+k*30; d.arc([rx-90, yy-24, rx+90, yy+24], 0, 180, fill=(236, 110, 120), width=6)
+    cut_y = 330 if t > 3.2 else 160
+    d.line([(rx, ry-50), (rx, cut_y)], fill=HAIR, width=30)
+    if 3.2 < t < 5.0:
+        u = t-3.2; d.line([(rx+40+u*60, 160+u*260), (rx+40+u*60, 330+u*260)], fill=HAIR, width=30)
+    # 가위
+    if 2.0 < t < 3.6:
+        op = abs(math.sin(t*9)); sy = 330
+        for sgn in (1, -1): d.line([(rx+180, sy), (rx+10, sy+sgn*op*40)], fill=(170, 176, 190), width=14)
+    # 당기는 손가락
+    if 5.6 < t < 8.8:
+        d.ellipse([rx-50, cut_y-60-pull, rx-4, cut_y+20-pull], fill=SKIN); d.ellipse([rx+4, cut_y-60-pull, rx+50, cut_y+20-pull], fill=SKIN)
+    lab(im, '끝: 안 느껴', (820, 260), LG, t, 3.4)
+    lab(im, '뿌리: 살아 있어', (260, 900), LM, t, 1.0)
+    if t > 6.4: bubble(im, '아야!', (820, 520), min(1, (t-6.4)/0.3)*(1 if t < 8.8 else max(0, (9.3-t)/0.5)))
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'hair':
+    build('hair', hc_s1, HC1, hc_s2, HC2, sys.argv[2], preview=[(hc_s1, int(2*F), HC1), (hc_s1, int(5*F), HC1), (hc_s2, int(3.6*F), HC2), (hc_s2, int(7*F), HC2)])
+
+# ================= 4. 배꼽 =================
+BB1 = 6*F
+def bb_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (214, 236, 246)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '배꼽은 왜 있어?', font=FBW, fill=TXT, anchor='mm')
+    d.rounded_rectangle([80, 700, 1000, 1000], radius=80, fill=(250, 250, 255))
+    for k in range(12): d.ellipse([140+k*70, 660+10*math.sin(k+t*2), 220+k*70, 740+10*math.sin(k+t*2)], fill=(255, 255, 255))
+    cx = 540
+    d.ellipse([cx-100, 240, cx+100, 440], fill=SKIN)
+    d.ellipse([cx-44, 310, cx-24, 330], fill=INK); d.ellipse([cx+24, 310, cx+44, 330], fill=INK); d.ellipse([cx-16, 370, cx+16, 400], fill=LIP)
+    d.rounded_rectangle([cx-120, 440, cx+120, 720], radius=80, fill=SKIN)
+    d.ellipse([cx-12, 590, cx+12, 614], fill=(220, 170, 150))
+    k = ease((t-0.8)/1.0); d.line([(cx+110, 500), (cx+110-80*k, 500+80*k)], fill=SKIN, width=34)
+    lab(im, '여기 뭐야?', (820, 560), LT, t, 1.6)
+    return im
+BB2 = 11*F
+def bb_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
+    born = ease((t-5.0)/1.0)
+    d.text((W/2, 80), '엄마 배 속에 있을 때' if t < 5.5 else '태어나면', font=FBW, fill=TXT, anchor='mm')
+    # 엄마 배 (큰 원)
+    a = 1-born
+    if a > 0:
+        d = blend(im, lambda dd: dd.ellipse([180, 220, 900, 900], fill=(250, 214, 200, int(255*a))))
+    bx, by = 460+born*80, 560
+    d.ellipse([bx-130, by-30, bx+130, by+140], fill=SKIN)                       # 몸
+    d.line([(bx+90, by+120), (bx+170, by+60)], fill=SKIN, width=40); d.ellipse([bx+150, by+40, bx+195, by+85], fill=SKIN)   # 다리
+    d.line([(bx-60, by+40), (bx+10, by-10)], fill=(240, 212, 186), width=30)       # 팔
+    d.ellipse([bx-190, by-170, bx-10, by+10], fill=SKIN)                         # 머리
+    d.arc([bx-150, by-110, bx-110, by-80], 20, 160, fill=INK, width=6); d.arc([bx-90, by-110, bx-50, by-80], 20, 160, fill=INK, width=6)
+    d.ellipse([bx-180, by-60, bx-150, by-36], fill=(250, 200, 200))
+    nav = (bx+60, by+60)
+    cut = t > 7.2
+    end = (780, 560) if born < 1 else (900, 700)
+    if not cut:
+        d.line([nav, end], fill=(236, 160, 170), width=22)
+        if t < 5.0:
+            for k in range(5):
+                f = ((t*0.8+k/5) % 1); x = end[0]+(nav[0]-end[0])*f; y = end[1]+(nav[1]-end[1])*f
+                d.ellipse([x-12, y-12, x+12, y+12], fill=(255, 226, 120))
+    else:
+        u = t-7.2; stub = max(0, 1-max(0, u-1.2)/0.4)
+        if stub > 0: d.line([nav, (nav[0]+40, nav[1]+20)], fill=(236, 160, 170), width=22)
+        if u < 1.0: d.line([(nav[0]+70, nav[1]+30), end], fill=(236, 160, 170), width=22)
+        if stub <= 0: d.ellipse([nav[0]-12, nav[1]-12, nav[0]+12, nav[1]+12], fill=(220, 170, 150))
+    if born > 0.5: bubble(im, '응애!', (320, 300), min(1, (t-5.5)/0.3), 0.8)
+    lab(im, '탯줄: 밥 길', (800, 420), LT, t, 1.0, 5.0)
+    lab(im, '싹둑: 안 아파', (800, 420), LM, t, 7.2, 9.0)
+    lab(im, '톡! 배꼽', (nav[0]+40, nav[1]+170), LG, t, 9.0)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'belly':
+    build('belly', bb_s1, BB1, bb_s2, BB2, sys.argv[2], preview=[(bb_s1, int(3*F), BB1), (bb_s2, int(3*F), BB2), (bb_s2, int(7.6*F), BB2), (bb_s2, int(10*F), BB2)])
+
+# ================= 5. 새와 전깃줄 =================
+POLE = (150, 130, 110); WIRE = (70, 70, 80); BIRD = (170, 130, 100)
+def sparrow(d, x, y, s=1.0):
+    d.ellipse([x-40*s, y-60*s, x+40*s, y], fill=BIRD); d.ellipse([x+10*s, y-86*s, x+56*s, y-40*s], fill=BIRD)
+    d.polygon([(x+56*s, y-66*s), (x+76*s, y-60*s), (x+56*s, y-54*s)], fill=(236, 180, 90)); d.ellipse([x+30*s, y-72*s, x+40*s, y-62*s], fill=INK)
+    d.polygon([(x-40*s, y-30*s), (x-80*s, y-10*s), (x-40*s, y-10*s)], fill=(140, 104, 80))
+    d.line([(x-10*s, y), (x-10*s, y+8*s)], fill=(200, 140, 90), width=int(5*s)); d.line([(x+14*s, y), (x+14*s, y+8*s)], fill=(200, 140, 90), width=int(5*s))
+BW1 = 7*F
+def bw_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.rectangle([0, 860, W, H], fill=PARK); d.text((W/2, 80), '새는 왜 안 찌릿해?', font=FBW, fill=TXT, anchor='mm')
+    for px in (60, 1020): d.rectangle([px-14, 200, px+14, 860], fill=POLE); d.rectangle([px-80, 230, px+80, 250], fill=POLE)
+    for wy in (300, 380): d.line([(60, 250+(wy-250)), (1020, 250+(wy-250))], fill=WIRE, width=6)
+    for k, bx in enumerate((300, 420, 560, 720)):
+        hop = abs(math.sin(t*3+k))*6 if (k == 2 and t > 2) else 0
+        sparrow(d, bx, 300-hop, 0.8)
+    kid(d, 420, 860, s=0.75); d.line([(460, 700), (560, 560)], fill=SKIN, width=22)
+    lab(im, '전기 흐르는 줄', (780, 520), LT, t, 1.5)
+    return im
+BW2 = 10*F
+def bw_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.text((W/2, 80), '줄을 크게 보면', font=FBW, fill=TXT, anchor='mm')
+    wy = 560; d.line([(0, wy), (W, wy)], fill=WIRE, width=30)
+    for k in range(14):
+        x = ((t*220+k*80) % (W+80))-40
+        d.ellipse([x-12, wy-12, x+12, wy+12], fill=(255, 230, 110))
+    sparrow(d, 540, wy-14, 2.2)
+    lab(im, '전기: 줄 따라 쭉', (260, 720), LT, t, 0.8)
+    lab(im, '새: 줄 하나만', (800, 250), LM, t, 2.8)
+    if t > 5.5:
+        a = min(1, (t-5.5)/0.5); cx, cy = 820, 860
+        pass
+    lab(im, '사람은: 절대 만지면 안 돼', (540, 880), LG, t, 5.8)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'bird':
+    build('bird', bw_s1, BW1, bw_s2, BW2, sys.argv[2], preview=[(bw_s1, int(3*F), BW1), (bw_s2, int(2*F), BW2), (bw_s2, int(4*F), BW2), (bw_s2, int(8*F), BW2)])
+
+# ================= 6. 강아지 =================
+DG1 = 7*F
+def dg_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (200, 226, 246), (240, 246, 250))
+    d.rectangle([0, 820, W, H], fill=(214, 206, 190)); d.text((W/2, 80), '강아지는 왜 헥헥해?', font=FBW, fill=TXT, anchor='mm')
+    dog(d, 380, 820, 1.2, tongue=1, t=t)
+    kid(d, 820, 820, s=0.85)
+    if t > 2.5: d.rounded_rectangle([805, 820-290*0.85+40, 835, 820-290*0.85+80], radius=12, fill=(240, 130, 140))
+    lab(im, '헥헥!', (540, 300), LT, t, 1.0)
+    return im
+DG2 = 10*F
+def dg_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '더울 때 식히는 법', font=FBW, fill=TXT, anchor='mm')
+    d.line([(540, 170), (540, 980)], fill=(214, 210, 224), width=4)
+    kid(d, 270, 900, s=1.0)
+    for k in range(6):
+        ph = (t*0.5+k/6) % 1; x = 200+(k*37) % 140; y = 520+ph*200
+        d.ellipse([x-9, y-14, x+9, y+10], fill=(130, 180, 240))
+    dog(d, 760, 900, 1.0, tongue=1, t=t)
+    hx, hy = 870, 670+40
+    for k in range(5):
+        ph = (t*0.9+k/5) % 1; x = hx+30*math.sin(k+ph*4); y = hy+60-ph*260
+        a = 1-ph
+        if a > 0: d = blend(im, lambda dd, x=x, y=y, a=a: dd.arc([x-26, y-18, x+26, y+18], 200, 340, fill=(160, 190, 230, int(255*a)), width=8))
+    for px in (650, 720, 790, 830): d.ellipse([px-8, 905, px+8, 921], fill=(130, 180, 240))
+    lab(im, '사람: 땀', (270, 300), LM, t, 0.8)
+    lab(im, '강아지: 혀로 헥헥', (780, 300), LT, t, 2.6)
+    lab(im, '마르면: 시원', (780, 400), LG, t, 5.6)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'dog':
+    build('dog', dg_s1, DG1, dg_s2, DG2, sys.argv[2], preview=[(dg_s1, int(3*F), DG1), (dg_s2, int(2*F), DG2), (dg_s2, int(5*F), DG2), (dg_s2, int(8*F), DG2)])
+
+# ================= 7. 메아리 =================
+MT1 = (120, 160, 130); MT2 = (150, 186, 150); MT3 = (96, 130, 110)
+def mountains(d):
+    d.polygon([(560, 900), (880, 300), (1200, 900)], fill=MT3)
+    d.polygon([(-100, 900), (200, 560), (520, 900)], fill=MT2)
+    d.rectangle([0, 860, W, H], fill=MT1)
+EC1 = 7*F
+def ec_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.text((W/2, 80), '산이 따라 해!', font=FBW, fill=TXT, anchor='mm')
+    mountains(d)
+    kid(d, 220, 560, s=0.8)
+    if 0.8 < t < 2.4: bubble(im, '야호!', (360, 330), min(1, (t-0.8)/0.2)*min(1, (2.4-t)/0.3))
+    if 3.6 < t: bubble(im, '야호…', (820, 230), min(1, (t-3.6)/0.3)*0.6, 0.7)
+    lab(im, '누가 있어?', (560, 700), LT, t, 4.4)
+    return im
+EC2 = 10*F
+def ec_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.text((W/2, 80), '소리를 눈으로 보면', font=FBW, fill=TXT, anchor='mm')
+    mountains(d); kid(d, 220, 560, s=0.8)
+    sx, sy = 300, 420; mx, my = 800, 520
+    T = 2.6
+    u = (t-0.6) % 5.2 if t > 0.6 else -1
+    if 0 <= u < T:
+        k = u/T; x = sx+(mx-sx)*k; y = sy+(my-sy)*k; r = 34
+        d.ellipse([x-r, y-r, x+r, y+r], fill=(255, 214, 120))
+        for g in (1, 2): d.arc([x-r-g*24, y-r-g*24, x+r+g*24, y+r+g*24], -40, 40, fill=(255, 214, 120), width=6)
+    elif T <= u < 2*T:
+        k = (u-T)/T; x = mx+(sx-mx)*k; y = my+(sy-my)*k; r = 34*(1-0.5*k)
+        a = 1-0.5*k
+        d = blend(im, lambda dd: dd.ellipse([x-r, y-r, x+r, y+r], fill=(255, 214, 120, int(255*a))))
+        if k < 0.2: d.line([(mx-30, my-60), (mx+30, my+60)], fill=(255, 255, 255), width=6)
+    lab(im, '야호: 슝~', (430, 290), LT, t, 0.8)
+    lab(im, '산에 통!', (830, 400), LM, t, 3.2)
+    lab(im, '돌아와서: 작게', (470, 650), LG, t, 5.4)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'echo':
+    build('echo', ec_s1, EC1, ec_s2, EC2, sys.argv[2], preview=[(ec_s1, int(1.5*F), EC1), (ec_s1, int(5*F), EC1), (ec_s2, int(2*F), EC2), (ec_s2, int(4.5*F), EC2)])
