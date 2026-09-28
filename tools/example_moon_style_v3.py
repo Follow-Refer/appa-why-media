@@ -312,3 +312,103 @@ def ln_sounds(total, sr):
     return y
 if __name__ == '__main__' and sys.argv[1] == 'lightning':
     build('lightning', ln_s1, LN1, ln_s2, LN2, sys.argv[2], sounds=ln_sounds, preview=[(ln_s1, int(1*F), LN1), (ln_s1, int(2.2*F), LN1), (ln_s2, int(4.5*F), LN2), (ln_s2, int(7.1*F), LN2)])
+
+# ================= 비행기구름 =================
+SK1 = (120, 176, 232); SK2 = (206, 230, 248); PLANE = (245, 245, 250); PLANE_D = (190, 196, 214)
+def plane(d, x, y, s=1.0):
+    d.rounded_rectangle([x-120*s, y-18*s, x+120*s, y+18*s], radius=int(18*s), fill=PLANE)
+    d.polygon([(x-10*s, y), (x-70*s, y-90*s), (x-40*s, y-90*s), (x+40*s, y)], fill=PLANE_D)
+    d.polygon([(x-10*s, y), (x-70*s, y+70*s), (x-40*s, y+70*s), (x+40*s, y)], fill=PLANE_D)
+    d.polygon([(x-110*s, y), (x-140*s, y-50*s), (x-118*s, y-50*s), (x-90*s, y)], fill=PLANE_D)
+    for k in range(4): d.ellipse([x+(20+k*22)*s, y-8*s, x+(32+k*22)*s, y+4*s], fill=(150, 170, 210))
+def sky_bg(d, top=SK1, bot=SK2):
+    for yy in range(H): d.line([(0, yy), (W, yy)], fill=mix(top, bot, yy/H))
+CT_1 = 7*F
+def cn_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.rectangle([0, 860, W, H], fill=PARK); d.text((W/2, 80), '하늘에 누가 줄 그었어!', font=FBW, fill=TXT, anchor='mm')
+    px = -100+ease(t/6.5)*1250; py = 330-0.08*px
+    # 줄: 비행기 뒤쪽, 조금 떨어진 곳부터 하얗게
+    x0 = -100
+    if px-160 > x0:
+        d = blend(im, lambda dd: dd.line([(x0, 330-0.08*x0), (px-170, py+8)], fill=(255, 255, 255, 235), width=26))
+    plane(d, px, py, 0.55)
+    kid(d, 330, 860, s=0.85)
+    hx, hy = 330+60, 860-290*0.85+80; d.line([(hx, hy), (hx+130, hy-150)], fill=SKIN, width=24)
+    lab(im, '하얀 줄!', (760, 560), LT, t, 2.5)
+    return im
+CT_2 = 10*F
+def cn_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (70, 120, 200), (150, 196, 240))
+    d.text((W/2, 80), '비행기 엔진 뒤를 보면', font=FBW, fill=(245, 245, 250), anchor='mm')
+    # 큰 엔진 (오른쪽), 입김이 왼쪽으로
+    ex, ey = 860, 470
+    d.rounded_rectangle([ex-150, ey-80, ex+150, ey+80], radius=70, fill=(220, 224, 236)); d.ellipse([ex-170, ey-80, ex-110, ey+80], fill=(120, 124, 140))
+    d.polygon([(ex-60, ey-80), (ex+40, ey-230), (ex+120, ey-230), (ex+80, ey-80)], fill=PLANE_D)
+    # 입김 알갱이: 나오면 주황(따뜻) → 왼쪽으로 가며 흰 얼음 반짝이
+    parts = []
+    for k in range(60):
+        born = k*0.13
+        if t > born:
+            age = t-born; x = ex-180-age*190; y = ey+math.sin(k*1.7)*30*(1+age*0.4)
+            if x > -40:
+                cool = min(1, age/1.6); parts.append((x, y, cool, k))
+    for x, y, cool, k in parts:
+        col = mix((255, 196, 150), (255, 255, 255), cool); r = 16+6*cool
+        d.ellipse([x-r, y-r, x+r, y+r], fill=col)
+        if cool > 0.95 and k % 3 == 0:
+            d.line([x-r-6, y, x+r+6, y], fill=(210, 230, 255), width=3); d.line([x, y-r-6, x, y+r+6], fill=(210, 230, 255), width=3)
+    # 온도계: 아주 추워
+    tx, ty = 150, 760
+    d.rounded_rectangle([tx-18, ty-200, tx+18, ty+20], radius=18, fill=(245, 245, 250)); d.ellipse([tx-34, ty, tx+34, ty+68], fill=(120, 170, 240))
+    d.rectangle([tx-8, ty-40, tx+8, ty+20], fill=(120, 170, 240))
+    lab(im, '엔진 입김: 후~', (ex-120, ey+170), LT, t, 0.6)
+    lab(im, '너무 추워: 꽁꽁', (330, 800), LM, t, 3.0)
+    lab(im, '하얀 줄 = 구름', (430, 300), LG, t, 6.0)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'contrail':
+    build('contrail', cn_s1, CT_1, cn_s2, CT_2, sys.argv[2], preview=[(cn_s1, int(2*F), CT_1), (cn_s1, int(6*F), CT_1), (cn_s2, int(3*F), CT_2), (cn_s2, int(8*F), CT_2)])
+
+# ================= 하늘 파랑 =================
+SLIDE = (236, 150, 120)
+COLS = [(240, 110, 110), (250, 180, 90), (250, 226, 110), (130, 200, 130), (110, 160, 240)]
+BS_1 = 6*F
+def bs_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (110, 170, 236), (200, 226, 248))
+    d.rectangle([0, 880, W, H], fill=PARK); d.text((W/2, 80), '하늘은 왜 파래?', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([180, 640, 440, 670], fill=SLIDE); d.line([(200, 670), (200, 880)], fill=(160, 160, 180), width=16); d.line([(420, 670), (420, 880)], fill=(160, 160, 180), width=16)
+    d.polygon([(440, 640), (440, 670), (820, 880), (760, 880)], fill=SLIDE)
+    kid(d, 310, 640, s=0.8)
+    # 크레파스 든 손? → 물음표 붓: 하늘에 붓칠하는 손이 없음을 보여 주는 대신 라벨
+    lab(im, '누가 색칠했어?', (720, 360), LT, t, 1.5)
+    return im
+BS_2 = 11*F
+def bs_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im)
+    fill = ease((t-3.5)/4.0)
+    sky_bg(d, mix((60, 64, 90), (110, 170, 236), fill), mix((90, 94, 120), (200, 226, 248), fill))
+    d.text((W/2, 80), '햇빛 속을 보면', font=FBW, fill=(245, 245, 250), anchor='mm')
+    d.rectangle([0, 900, W, H], fill=PARK)
+    sx, sy = 120, 220; d.ellipse([sx-80, sy-80, sx+80, sy+80], fill=SUN)
+    # 공기 알갱이
+    random.seed(11); air = [(random.uniform(250, 1050), random.uniform(250, 860)) for _ in range(40)]
+    for ax, ay in air: d.ellipse([ax-6, ay-6, ax+6, ay+6], fill=(210, 214, 230))
+    # 색 공 줄기: 해에서 오른쪽 아래로 흘러감. 파랑은 공기 알갱이 만나면 사방으로 튐
+    for k in range(120):
+        born = k*0.075; age = t-born
+        if age <= 0: continue
+        c = k % 5; col = COLS[c]
+        x = sx+60+age*260; y = sy+40+age*190
+        if c == 4 and age > 1.3:  # 파랑: 튕겨서 사방으로
+            random.seed(k); ang = random.uniform(0, 2*math.pi); u = min(age-1.3, random.uniform(1.2, 2.6)); hop = 1.3*random.uniform(0.3, 1.4)
+            bx = sx+60+hop*260+math.cos(ang)*u*260+8*math.sin(t*3+k); by = sy+40+hop*190+math.sin(ang)*u*260+8*math.cos(t*3+k)
+            if 0 < bx < W and 150 < by < 900: d.ellipse([bx-13, by-13, bx+13, by+13], fill=col)
+        elif y < 900 and x < W:
+            d.ellipse([x-13, y-13, x+13, y+13], fill=col)
+    kid(d, 900, 900, s=0.6)
+    lab(im, '햇빛: 여러 색', (400, 200), LT, t, 0.6)
+    lab(im, '파랑만 통통 튀어', (620, 470), LM, t, 2.4)
+    lab(im, '하늘 가득 파랑', (560, 820), LG, t, 6.5)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'bluesky':
+    build('bluesky', bs_s1, BS_1, bs_s2, BS_2, sys.argv[2], preview=[(bs_s1, int(3*F), BS_1), (bs_s2, int(2*F), BS_2), (bs_s2, int(5*F), BS_2), (bs_s2, int(9*F), BS_2)])
