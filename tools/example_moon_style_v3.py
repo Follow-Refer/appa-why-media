@@ -799,3 +799,258 @@ def km_s2(i, n):
     return im
 if __name__ == '__main__' and sys.argv[1] == 'kimchi':
     build('kimchi', km_s1, KM1, km_s2, KM2, sys.argv[2], preview=[(km_s1, int(3*F), KM1), (km_s2, int(2*F), KM2), (km_s2, int(5.5*F), KM2), (km_s2, int(9.5*F), KM2)])
+
+# ================= 0층 =================
+FB2 = ImageFont.truetype('/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc', 64, index=1)
+def floor_btn(d, x, y, txt, lit=False):
+    d.ellipse([x-46, y-46, x+46, y+46], fill=(255, 236, 150) if lit else (236, 236, 244), outline=(190, 190, 206), width=6)
+    d.text((x, y), txt, font=FB2, fill=TXT, anchor='mm')
+ZF1 = 7*F
+def zf_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (226, 228, 236)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '왜 0층은 없어?', font=FBW, fill=TXT, anchor='mm')
+    d.rounded_rectangle([160, 170, 520, 1000], radius=30, fill=(200, 204, 216))
+    labs = ['5', '4', '3', '2', '1', 'B1', 'B2']
+    k = int(min(6, max(0, (t-0.8)/0.6)))
+    for j, s in enumerate(labs):
+        floor_btn(d, 340, 240+j*110, s, lit=(6-j) == k)
+    # 1과 B1 사이 빈칸 물음표
+    if t > 4.6: bubble(im, '0?', (340, 730+0), min(1, (t-4.6)/0.3), 0.7)
+    kid(d, 800, 1000, s=0.9)
+    fy = 240+(6-k)*110; d.line([(760, 700), (410, fy)], fill=SKIN, width=24)
+    lab(im, '0은 어디?', (800, 300), LT, t, 5.0)
+    return im
+ZF2 = 10*F
+def building(d, x, nums, hi):
+    d.rectangle([x-150, 300, x+150, 900], fill=(236, 214, 190)); d.polygon([(x-170, 300), (x, 200), (x+170, 300)], fill=(210, 150, 130))
+    for j, s in enumerate(nums):
+        y = 820-j*170
+        d.rectangle([x-110, y-60, x+110, y+40], fill=(210, 230, 246) if j != hi else (255, 236, 150))
+        d.text((x-150-40, y-10), s, font=FB2, fill=TXT, anchor='mm')
+ZF_SEL = 2
+def zf_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.text((W/2, 80), '같은 건물, 다른 숫자', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 900, W, H], fill=PARK)
+    k = ease((t-3.2)/1.4)
+    building(d, 320, ['1', '2', '3', '4'], 2)
+    if k > 0:
+        building(d, 820, ['0', '1', '2', '3'][:], 2)
+        if k < 1: d = blend(im, lambda dd: dd.rectangle([600, 190, 1080, 900], fill=(214, 232, 246, int(255*(1-k)))))
+    # 창문 속 아이 얼굴 (3번째 칸)
+    for bx in (320,) + ((820,) if k > 0.5 else ()):
+        y = 820-2*170-10; d.ellipse([bx-36, y-36, bx+36, y+36], fill=SKIN)
+    lab(im, '우리: 1층부터', (320, 970), LT, t, 0.8)
+    lab(im, '먼 나라: 0층부터', (820, 970), LM, t, 4.2)
+    lab(im, '3층 = 2층!', (570, 170), LG, t, 6.5)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'zero':
+    build('zero', zf_s1, ZF1, zf_s2, ZF2, sys.argv[2], preview=[(zf_s1, int(3*F), ZF1), (zf_s1, int(6*F), ZF1), (zf_s2, int(2*F), ZF2), (zf_s2, int(8*F), ZF2)])
+
+# ================= 안녕 =================
+def wave_kid(d, cx, gy, s, t, shirt, hand_phase=0):
+    kid(d, cx, gy, s=s, shirt=shirt)
+    a = math.sin(t*6+hand_phase)*0.4
+    sx, sy = cx+60*s, gy-200*s
+    ex, ey = sx+90*s*math.cos(-1.2+a), sy+90*s*math.sin(-1.2+a)
+    d.line([(sx, sy), (ex, ey)], fill=SKIN, width=int(26*s)); d.ellipse([ex-20*s, ey-20*s, ex+20*s, ey+20*s], fill=SKIN)
+AN1 = 7*F
+def an_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (190, 222, 246), (246, 240, 226))
+    d.text((W/2, 80), '아침: 만날 때', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 860, W, H], fill=(220, 206, 186))
+    d.ellipse([860, 140, 980, 260], fill=SUN)
+    k = ease(t/2.5)
+    wave_kid(d, 160+k*200, 860, 0.9, t, (180, 200, 230))
+    wave_kid(d, 920-k*200, 860, 0.9, t, (240, 190, 170), 1.5)
+    if t > 2.6: bubble(im, '안녕!', (540, 400), min(1, (t-2.6)/0.3))
+    lab(im, '만날 때: 안녕', (540, 980), LT, t, 3.2)
+    return im
+AN2 = 10*F
+def an_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (250, 200, 160), (246, 226, 214))
+    d.text((W/2, 80), '저녁: 헤어질 때', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 860, W, H], fill=(214, 196, 176))
+    k = ease((t-2.4)/3.0)
+    wave_kid(d, 360-k*200, 860, 0.9, t, (180, 200, 230))
+    wave_kid(d, 720+k*200, 860, 0.9, t, (240, 190, 170), 1.5)
+    if 0.6 < t: bubble(im, '안녕!', (540, 380), min(1, (t-0.6)/0.3))
+    lab(im, '헤어질 때도: 안녕', (540, 980), LM, t, 1.2)
+    if t > 5.8:
+        a = min(1, (t-5.8)/0.6); s = 1+0.05*math.sin(t*4)
+        def heart(dd, cx=540, cy=600, r=70*s):
+            c = (240, 130, 150, int(255*a))
+            dd.ellipse([cx-r, cy-r*0.6, cx, cy+r*0.4], fill=c); dd.ellipse([cx, cy-r*0.6, cx+r, cy+r*0.4], fill=c)
+            dd.polygon([(cx-r*0.96, cy), (cx+r*0.96, cy), (cx, cy+r*1.1)], fill=c)
+        d = blend(im, heart)
+        lab(im, '안녕 = 편안해', (540, 760), LG, t, 6.2)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'annyeong':
+    build('annyeong', an_s1, AN1, an_s2, AN2, sys.argv[2], preview=[(an_s1, int(4*F), AN1), (an_s2, int(2*F), AN2), (an_s2, int(5*F), AN2), (an_s2, int(8*F), AN2)])
+
+# ================= 신호등 =================
+def ped_light(d, x, y, red_on, green_on):
+    d.rectangle([x-12, y+200, x+12, 900], fill=(120, 120, 130))
+    d.rounded_rectangle([x-70, y-20, x+70, y+220], radius=20, fill=(60, 60, 70))
+    d.ellipse([x-50, y, x+50, y+100], fill=(240, 80, 80) if red_on else (110, 70, 70))
+    d.ellipse([x-50, y+110, x+50, y+210], fill=(90, 210, 130) if green_on else (60, 100, 80))
+TL1 = 7*F
+def tl_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d)
+    d.text((W/2, 80), '빨간색은 왜 멈춰?', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 900, W, H], fill=(170, 170, 180))
+    for k in range(6): d.rectangle([120+k*150, 940, 200+k*150, 1060], fill=(245, 245, 250))
+    ped_light(d, 820, 300, t < 5.2, t >= 5.2)
+    kid(d, 300, 900, s=0.8)
+    d.ellipse([420, 520, 560, 660], fill=SKIN); d.rounded_rectangle([400, 660, 580, 900], radius=60, fill=(150, 170, 210))
+    lab(im, '빨간불: 멈춰!', (820, 240), LT, t, 1.0, 5.2)
+    return im
+TL2 = 10*F
+def tl_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (214, 226, 236), (240, 236, 228))
+    d.text((W/2, 80), '아주 옛날 기찻길', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 820, W, H], fill=(200, 186, 160))
+    for x in range(0, W, 60): d.rectangle([x, 830, x+30, 850], fill=(140, 110, 90))
+    d.line([(0, 820), (W, 820)], fill=(110, 110, 120), width=8); d.line([(0, 860), (W, 860)], fill=(110, 110, 120), width=8)
+    # 신호기 (빨간 등)
+    sx = 760; d.rectangle([sx-10, 420, sx+10, 820], fill=(110, 110, 120)); d.rounded_rectangle([sx-50, 360, sx+50, 460], radius=20, fill=(60, 60, 70))
+    d.ellipse([sx-34, 376, sx+34, 444], fill=(240, 80, 80))
+    # 기차: 왼쪽에서 와서 신호 앞에서 멈춤
+    k = ease(t/3.2); tx = -300+k*820
+    d.rounded_rectangle([tx-220, 640, tx+120, 800], radius=24, fill=(120, 160, 200)); d.rectangle([tx+30, 560, tx+120, 700], fill=(90, 120, 170))
+    d.rectangle([tx-160, 590, tx-120, 640], fill=(80, 80, 90))
+    for wx in (tx-170, tx-60, tx+60): d.ellipse([wx-34, 770, wx+34, 838], fill=(60, 60, 70))
+    if t < 3.4:
+        for j in range(3):
+            age = (t*1.5+j/3) % 1; d.ellipse([tx-160-age*60-30, 560-age*150-30, tx-160-age*60+30, 560-age*150+30], fill=(236, 236, 240))
+    lab(im, '기차: 빨강 멈춤', (sx, 300), LT, t, 1.6)
+    # 5.5초~: 신호등으로 옮겨감
+    if t > 5.6:
+        u = ease((t-5.6)/1.6)
+        cx, cy = sx+(300-sx)*u, 410+(640-410)*u
+        d = blend(im, lambda dd: dd.rounded_rectangle([200, 520, 400, 900], radius=30, fill=(240, 240, 246, int(230*u))))
+        ped_light(d, 300, 560, True, False)
+        lab(im, '길에서도: 멈춤', (300, 460), LM, t, 6.6)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'traffic':
+    build('traffic', tl_s1, TL1, tl_s2, TL2, sys.argv[2], preview=[(tl_s1, int(3*F), TL1), (tl_s1, int(6*F), TL1), (tl_s2, int(3*F), TL2), (tl_s2, int(8.5*F), TL2)])
+
+# ================= 엘리베이터 거울 =================
+EL1 = 7*F
+def el_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (214, 216, 224)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '왜 거울이 있어?', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([160, 180, 920, 1000], fill=(196, 198, 210))
+    d.rectangle([260, 240, 820, 860], fill=(226, 238, 246), outline=(170, 174, 190), width=10)  # 거울
+    # 거울 속 아이 (얼굴 표정 바뀜)
+    face = int(t*1.5) % 3
+    cx, cy = 540, 560
+    d.ellipse([cx-120, cy-120, cx+120, cy+120], fill=SKIN)
+    d.ellipse([cx-60, cy-40, cx-30, cy-10], fill=INK); d.ellipse([cx+30, cy-40, cx+60, cy-10], fill=INK)
+    if face == 0: d.ellipse([cx-30, cy+30, cx+30, cy+80], fill=LIP)
+    elif face == 1: d.rounded_rectangle([cx-20, cy+40, cx+20, cy+110], radius=18, fill=(240, 130, 140))
+    else: d.arc([cx-50, cy+20, cx+50, cy+80], 20, 160, fill=LIP, width=10)
+    d.rounded_rectangle([cx-110, cy+120, cx+110, cy+300], radius=60, fill=(180, 200, 230))
+    d.line([(160, 180), (160, 1000)], fill=(150, 150, 170), width=12)
+    lab(im, '메롱~', (800, 420), LT, t, 1.0, 4.0)
+    lab(im, '거울은 왜?', (540, 960), LT, t, 4.4)
+    return im
+EL2 = 10*F
+def wheelchair(d, x, y, s=1.0):
+    d.ellipse([x-80*s, y-10*s, x+80*s, y+150*s], outline=(90, 90, 110), width=int(14*s))
+    d.rounded_rectangle([x-60*s, y-90*s, x+60*s, y+40*s], radius=int(20*s), fill=(150, 170, 210))
+    d.ellipse([x-45*s, y-190*s, x+45*s, y-100*s], fill=SKIN)
+def el_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (236, 234, 240)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '휠체어는 뒤로 나와요', font=FBW, fill=TXT, anchor='mm')
+    # 옆에서 본 엘리베이터: 왼쪽 문, 오른쪽 벽에 거울
+    d.rectangle([180, 260, 900, 900], fill=(214, 216, 226), outline=(160, 164, 180), width=10)
+    op = ease((t-3.0)/1.0)
+    d.rectangle([180, 280, 200+int(-0*op), 890], fill=(170, 174, 190))
+    door_w = 90*(1-op); d.rectangle([140, 280, 140+door_w+40, 890], fill=(160, 164, 180))
+    d.rectangle([860, 360, 890, 820], fill=(206, 230, 246)); d.line([(860, 360), (860, 820)], fill=(150, 170, 200), width=6)
+    # 휠체어 (오른쪽 거울 보고 있음), 문 열린 뒤 뒤로 나감
+    back = ease((t-6.2)/2.5)
+    wx = 620-back*520
+    wheelchair(d, wx, 700, 1.1)
+    if 1.2 < t < 6.4:
+        k = ease((t-1.2)/1.2)
+        dashed(d, (wx+40, 520), (860, 560), (120, 150, 210), w=8, k=k)
+        if t > 3.6: dashed(d, (860, 560), (180, 600), (120, 150, 210), w=8, k=ease((t-3.6)/1.0))
+    lab(im, '못 돌아', (wx, 440), LT, t, 0.6, 3.4)
+    lab(im, '거울로 뒤 보기', (620, 200), LM, t, 2.0)
+    lab(im, '문 열렸다!', (330, 960), LG, t, 4.8)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'mirror':
+    build('mirror', el_s1, EL1, el_s2, EL2, sys.argv[2], preview=[(el_s1, int(2*F), EL1), (el_s1, int(5*F), EL1), (el_s2, int(4.5*F), EL2), (el_s2, int(8*F), EL2)])
+
+# ================= 촛불 =================
+CAKE = (250, 236, 226); CREAM = (255, 250, 246); BERRY = (230, 90, 110)
+def cake(d, cx, cy, n, lit, t):
+    d.rounded_rectangle([cx-260, cy-80, cx+260, cy+160], radius=40, fill=CAKE)
+    d.rounded_rectangle([cx-260, cy-100, cx+260, cy-40], radius=30, fill=CREAM)
+    for k in range(6): d.ellipse([cx-230+k*92, cy-60, cx-190+k*92, cy-20], fill=BERRY)
+    for k in range(n):
+        x = cx-180+k*(360/(n-1) if n > 1 else 0)
+        d.rectangle([x-10, cy-230, x+10, cy-100], fill=[(140, 180, 240), (240, 170, 190), (160, 220, 170), (250, 220, 120), (200, 170, 240)][k % 5])
+        if lit[k] > 0:
+            fl = lit[k]*(1+0.1*math.sin(t*14+k))
+            d.ellipse([x-16*fl, cy-236-54*fl, x+16*fl, cy-236], fill=(255, 200, 90)); d.ellipse([x-8*fl, cy-236-34*fl, x+8*fl, cy-236], fill=(255, 240, 180))
+CD1 = 7*F
+def cd_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (250, 238, 226)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '생일엔 왜 후 불어?', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 820, W, H], fill=(214, 190, 160))
+    blow = ease((t-3.0)/0.8)
+    lit = [max(0, 1-ease((t-3.0-k*0.12)/0.3)) for k in range(5)]
+    cake(d, 540, 700, 5, lit, t)
+    # 아이 얼굴 (볼 빵빵)
+    hx, hy = 540, 300
+    d.ellipse([hx-110, hy-110, hx+110, hy+110], fill=SKIN)
+    d.ellipse([hx-50, hy-30, hx-24, hy-4], fill=INK); d.ellipse([hx+24, hy-30, hx+50, hy-4], fill=INK)
+    if 2.4 < t < 4.0:
+        d.ellipse([hx-90, hy+10, hx-40, hy+60], fill=(250, 190, 190)); d.ellipse([hx+40, hy+10, hx+90, hy+60], fill=(250, 190, 190))
+        d.ellipse([hx-16, hy+50, hx+16, hy+80], fill=LIP)
+        for k in range(4):
+            x = hx+(k-1.5)*50; y = hy+140+blow*80
+            d.arc([x-30, y-12, x+30, y+12], 200, 340, fill=(200, 210, 230), width=6)
+    else:
+        d.arc([hx-50, hy+30, hx+50, hy+90], 20, 160, fill=LIP, width=10)
+    # 연기
+    if t > 3.4:
+        for k in range(5):
+            x0 = 540-180+k*90; age = t-3.4-k*0.12
+            if age > 0:
+                pts = [(x0+18*math.sin(yy/30+k), 470-yy) for yy in range(0, int(min(260, age*180)), 6)]
+                if len(pts) > 1: d.line(pts, fill=(200, 200, 210), width=6)
+    lab(im, '후~!', (860, 520), LT, t, 3.0)
+    return im
+CD2 = 10*F
+def cd_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (60, 70, 120), (140, 130, 190))
+    d.text((W/2, 80), '초 하나 = 한 살', font=FBW, fill=(245, 245, 250), anchor='mm')
+    # 초가 하나씩 켜짐 (1~5)
+    k = int(min(5, max(0, (t-0.4)/0.7)))
+    lit = [1 if j < k else 0 for j in range(5)]
+    cake(d, 540, 800, 5, lit, t)
+    for j in range(k):
+        x = 540-180+j*90; d.text((x, 1010), str(j+1), font=FB2, fill=(255, 240, 180), anchor='mm')
+    # 소원 연기가 하늘로 → 별
+    if t > 5.2:
+        u = t-5.2
+        for j in range(5):
+            x = 540-180+j*90; y = 560-u*120
+            if y > 200: d.ellipse([x-14, y-14, x+14, y+14], fill=(230, 230, 245))
+        if u > 2.8:
+            a = min(1, (u-2.8)/0.6); r = 40
+            def star(dd):
+                pts = []
+                for q in range(10):
+                    ang = -math.pi/2+q*math.pi/5; rr = r if q % 2 == 0 else r*0.45
+                    pts.append((540+rr*math.cos(ang), 220+rr*math.sin(ang)))
+                dd.polygon(pts, fill=(255, 236, 140, int(255*a)))
+            d = blend(im, star)
+    lab(im, '연기: 소원 슝~', (540, 360), LT, t, 5.6)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'candles':
+    build('candles', cd_s1, CD1, cd_s2, CD2, sys.argv[2], preview=[(cd_s1, int(1.5*F), CD1), (cd_s1, int(4.5*F), CD1), (cd_s2, int(3.5*F), CD2), (cd_s2, int(9*F), CD2)])
