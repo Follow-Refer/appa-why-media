@@ -225,3 +225,90 @@ if __name__ == '__main__':
         build('mosquito', mq_s1, NM1, mq_s2, NM2, out, sounds=mq_sounds, preview=[(mq_s1, int(2*F), NM1), (mq_s1, int(6.5*F), NM1), (mq_s2, int(4*F), NM2), (mq_s2, int(9*F), NM2)])
     elif which == 'balloon':
         build('balloon', bl_s1, BL1, bl_s2, BL2, out, sounds=bl_sounds, preview=[(bl_s1, int(1*F), BL1), (bl_s1, int(5*F), BL1), (bl_s2, int(5*F), BL2), (bl_s2, int(8*F), BL2)])
+
+# ================= 번개 =================
+RN1 = (40, 44, 70); RN2 = (70, 72, 100); WALL = (236, 226, 214); FRAME = (200, 180, 160); CLOUD = (120, 122, 150); CLOUD_L = (150, 152, 178)
+BOLT = (255, 244, 170)
+def bolt(d, x0, y0, x1, y1, seed=1, w=18, col=BOLT):
+    random.seed(seed); pts = [(x0, y0)]; n = 7
+    for k in range(1, n):
+        f = k/n; pts.append((x0+(x1-x0)*f+random.uniform(-60, 60), y0+(y1-y0)*f))
+    pts.append((x1, y1)); d.line(pts, fill=col, width=w, joint='curve')
+LN1 = 7*F
+def ln_s1(i, n):
+    t = i/F
+    flash = max(0, 1-abs(t-2.2)/0.18) + max(0, 1-abs(t-2.55)/0.12)*0.7
+    im = Image.new('RGB', (W, H), mix(WALL, (255, 255, 255), min(1, flash*0.6))); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '밖에 번쩍했어!', font=FBW, fill=TXT, anchor='mm')
+    # 창문
+    wx0, wy0, wx1, wy1 = 560, 200, 980, 620
+    sky = mix(RN1, (230, 230, 255), min(1, flash))
+    d.rectangle([wx0, wy0, wx1, wy1], fill=sky)
+    for k in range(14):
+        x = wx0+20+(k*37+int(t*300)) % (wx1-wx0-40); y = wy0+(k*53+int(t*500)) % (wy1-wy0)
+        d.line([x, y, x-8, y+26], fill=mix(sky, (200, 210, 240), 0.6), width=4)
+    if flash > 0.2: bolt(d, 820, wy0, 700, wy1-60, seed=4, w=14)
+    d.rectangle([wx0, wy0, wx1, wy1], outline=FRAME, width=20); d.line([(wx0+wx1)/2, wy0, (wx0+wx1)/2, wy1], fill=FRAME, width=14)
+    # 이불 속 아이: 번쩍 뒤 이불 속으로 쏙
+    hide = ease((t-2.4)/0.5)
+    d.rounded_rectangle([60, 700, 1020, 1000], radius=60, fill=(200, 190, 220))
+    hx, hy = 300, 640+int(120*hide)
+    d.ellipse([hx-90, hy-90, hx+90, hy+90], fill=SKIN)
+    if hide < 0.5:
+        d.ellipse([hx-40, hy-20, hx-20, hy], fill=INK); d.ellipse([hx+20, hy-20, hx+40, hy], fill=INK)
+        d.ellipse([hx-14, hy+24, hx+14, hy+50], fill=LIP)
+    else:
+        d.ellipse([hx-44, hy-28, hx-16, hy], fill=INK); d.ellipse([hx+16, hy-28, hx+44, hy], fill=INK)
+    d.rounded_rectangle([60, 690, 1020, 1000], radius=60, fill=BLANKET)
+    lab(im, '번쩍!', (770, 170), LT, t, 2.25)
+    return im
+LN2 = 10*F
+def ln_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im)
+    for yy in range(H): d.line([(0, yy), (W, yy)], fill=mix(RN1, RN2, yy/H))
+    d.text((W/2, 80), '구름 속을 보면', font=FBW, fill=(240, 236, 250), anchor='mm')
+    d.rectangle([0, 940, W, H], fill=(70, 80, 90))
+    for x in range(40, 1080, 180): d.rectangle([x, 880, x+120, 940], fill=(90, 100, 110))
+    # 큰 구름
+    for cx, cy, r in ((300, 380, 170), (520, 320, 210), (760, 380, 180), (420, 500, 170), (660, 500, 180)):
+        d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=CLOUD)
+    d.ellipse([360, 200, 520, 330], fill=CLOUD_L)
+    # 얼음 알갱이: 작은 것은 위로, 큰 것은 아래로, 부딪히면 반짝
+    charge = min(1, max(0, (t-1.0)/5.0))
+    for k in range(10):
+        ph = (t*0.45+k*0.1) % 1
+        xs = 260+k*52
+        if k % 2 == 0:  # 작은 얼음 위로
+            y = 580-ph*300; r = 12
+            d.ellipse([xs-r, y-r, xs+r, y+r], fill=(230, 240, 255))
+        else:           # 큰 얼음 아래로
+            y = 280+ph*300; r = 22
+            d.ellipse([xs-r, y-r, xs+r, y+r], fill=(200, 214, 240))
+        if abs(ph-0.5) < 0.06 and t < 6.8:
+            sx = xs-26; sy = 430
+            d.line([sx-26, sy, sx+26, sy], fill=YEL, width=9); d.line([sx, sy-26, sx, sy+26], fill=YEL, width=9)
+    # 전기가 모여 구름이 번쩍번쩍 빛남
+    if charge > 0 and t < 7.0:
+        d = blend(im, lambda dd: dd.ellipse([260, 250, 820, 620], fill=(255, 236, 120, int(110*charge*(0.5+0.5*abs(math.sin(t*7)))))))
+    # 7초: 번개가 땅으로
+    if t >= 7.0:
+        u = t-7.0; a = max(0, 1-max(0, u-0.5)/0.8)
+        if a > 0:
+            d = blend(im, lambda dd: dd.rectangle([0, 0, W, H], fill=(255, 255, 230, int(120*a*(1 if u < 0.15 else 0.4)))))
+            bolt(d, 560, 560, 600, 880, seed=7, w=int(26*a)+2, col=mix(RN1, BOLT, a))
+    lab(im, '얼음: 콩콩', (190, 220), LM, t, 0.6)
+    lab(im, '찌릿찌릿 모여', (840, 700), LT, t, 3.2, 7.0)
+    lab(im, '번쩍!', (850, 720), LT, t, 6.9)
+    return im
+def ln_sounds(total, sr):
+    y = np.zeros(int(sr*total)); rng = np.random.default_rng(2)
+    y += rng.normal(0, 0.015, len(y))       # 빗소리
+    for t0, amp in ((2.3, 0.35), (LN1/F-1.0+7.1, 0.5)):
+        n = int(sr*1.6); a = int(sr*t0)
+        if a >= len(y): continue
+        tt = np.arange(n)/sr
+        rum = rng.normal(0, 1, n); rum = np.convolve(rum, np.ones(300)/300, mode='same')*8
+        y[a:a+n] += (amp*rum*np.exp(-tt/0.6))[:len(y)-a]
+    return y
+if __name__ == '__main__' and sys.argv[1] == 'lightning':
+    build('lightning', ln_s1, LN1, ln_s2, LN2, sys.argv[2], sounds=ln_sounds, preview=[(ln_s1, int(1*F), LN1), (ln_s1, int(2.2*F), LN1), (ln_s2, int(4.5*F), LN2), (ln_s2, int(7.1*F), LN2)])
