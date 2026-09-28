@@ -739,3 +739,63 @@ def ec_s2(i, n):
     return im
 if __name__ == '__main__' and sys.argv[1] == 'echo':
     build('echo', ec_s1, EC1, ec_s2, EC2, sys.argv[2], preview=[(ec_s1, int(1.5*F), EC1), (ec_s1, int(5*F), EC1), (ec_s2, int(2*F), EC2), (ec_s2, int(4.5*F), EC2)])
+
+# ================= 김치 =================
+TABLE2 = (230, 206, 176); BOWL = (250, 250, 252); KRED = (224, 96, 80); KWHITE = (244, 240, 222); CAB = (214, 230, 170)
+def kimchi_bowl(d, cx, cy, s, red):
+    d.ellipse([cx-130*s, cy-40*s, cx+130*s, cy+40*s], fill=(236, 236, 240))
+    d.chord([cx-130*s, cy-100*s, cx+130*s, cy+100*s], 0, 180, fill=BOWL)
+    random.seed(int(cx))
+    for k in range(9):
+        x = cx+random.uniform(-90, 90)*s; y = cy-10*s+random.uniform(-26, 6)*s
+        col = mix(KWHITE, KRED, red) if k % 3 else mix(CAB, (200, 80, 64), red)
+        d.rounded_rectangle([x-34*s, y-16*s, x+34*s, y+16*s], radius=int(12*s), fill=col)
+    if red > 0.3:
+        for k in range(10):
+            x = cx+random.uniform(-80, 80)*s; y = cy-14*s+random.uniform(-20, 4)*s
+            d.ellipse([x-4*s, y-4*s, x+4*s, y+4*s], fill=(190, 50, 40))
+KM1 = 7*F
+def km_s1(i, n):
+    t = i/F; im = Image.new('RGB', (W, H), (246, 238, 226)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '내 김치는 왜 하얘?', font=FBW, fill=TXT, anchor='mm')
+    # 아빠(오른쪽) · 아이(왼쪽) 식탁 뒤에 앉음
+    d.ellipse([740, 250, 940, 450], fill=SKIN); d.rounded_rectangle([700, 440, 980, 700], radius=60, fill=(150, 170, 210))
+    d.ellipse([790, 320, 812, 342], fill=INK); d.ellipse([868, 320, 890, 342], fill=INK); d.arc([810, 360, 870, 400], 20, 160, fill=LIP, width=8)
+    kid(d, 300, 820, s=0.95)
+    d.rectangle([0, 640, W, H], fill=TABLE2)
+    kimchi_bowl(d, 780, 720, 1.2, 1.0)
+    kimchi_bowl(d, 330, 740, 1.0, 0.0)
+    look = math.sin(t*2.2)
+    lab(im, '왜 달라?', (540, 900), LT, t, 2.0)
+    return im
+KM2 = 11*F
+def km_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (190, 220, 244), (236, 244, 250))
+    d.text((W/2, 80), '아주 옛날에는', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 700, W, H], fill=(214, 200, 170))
+    # 바다 (오른쪽)
+    d.rectangle([640, 560, W, 700], fill=(150, 196, 230))
+    # 장독 (왼쪽)
+    jx, jy = 300, 720
+    d.ellipse([jx-150, jy-230, jx+150, jy+20], fill=(150, 104, 80)); d.rectangle([jx-110, jy-250, jx+110, jy-200], fill=(130, 90, 70))
+    red = ease((t-6.8)/1.6)
+    kimchi_bowl(d, jx, jy+150, 1.1, red)
+    # 배: 오른쪽에서 들어옴 (고추 싣고)
+    bx = 1200 - ease((t-1.8)/2.6)*460
+    d.polygon([(bx-150, 560), (bx+150, 560), (bx+110, 620), (bx-110, 620)], fill=(170, 120, 90))
+    d.line([(bx, 560), (bx, 380)], fill=(140, 100, 80), width=10); d.polygon([(bx+6, 390), (bx+130, 520), (bx+6, 520)], fill=(250, 250, 250))
+    for k in range(4):
+        px = bx-110+k*50; d.ellipse([px-14, 520, px+14, 560], fill=(214, 60, 50)); d.line([(px, 520), (px+4, 506)], fill=(90, 150, 80), width=5)
+    # 고추가 그릇으로 날아감
+    if t > 4.8:
+        k = ease((t-4.8)/1.8)
+        for j in range(3):
+            sx, sy = bx-60+j*40, 530; ex, ey = jx-40+j*40, jy+120
+            x = sx+(ex-sx)*k; y = sy+(ey-sy)*k-180*math.sin(math.pi*k)
+            if k < 1: d.ellipse([x-12, y-22, x+12, y+22], fill=(214, 60, 50))
+    lab(im, '옛날 김치: 하양', (300, 400), LM, t, 0.6)
+    lab(im, '고추: 배 타고 왔어', (760, 300), LT, t, 3.0)
+    lab(im, '빨간 김치!', (300, 980), LG, t, 8.2)
+    return im
+if __name__ == '__main__' and sys.argv[1] == 'kimchi':
+    build('kimchi', km_s1, KM1, km_s2, KM2, sys.argv[2], preview=[(km_s1, int(3*F), KM1), (km_s2, int(2*F), KM2), (km_s2, int(5.5*F), KM2), (km_s2, int(9.5*F), KM2)])
