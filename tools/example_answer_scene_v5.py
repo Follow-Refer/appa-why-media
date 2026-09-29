@@ -189,3 +189,70 @@ if __name__ == '__main__':
         build('lightning5', la_s1, LA1, la_s2, LA2, out, sounds=la_sounds, preview=[(la_s1, int(1.9*F), LA1), (la_s1, int(5.85*F), LA1), (la_s2, int(4.5*F), LA2), (la_s2, int(8.5*F), LA2)])
     elif which == 'contrail':
         build('contrail5', ca_s1, CA1, ca_s2, CA2, out, preview=[(ca_s1, int(2.5*F), CA1), (ca_s1, int(5.5*F), CA1), (ca_s2, int(3.5*F), CA2), (ca_s2, int(8.5*F), CA2)])
+
+# ================= 구름 = 분무기 안개처럼 아주 작은 물방울 =================
+def cup_vs_spray(t):
+    im = Image.new('RGB', (W, H), (236, 242, 248)); d = ImageDraw.Draw(im)
+    d.text((W/2, 80), '물을 붓거나, 칙 뿌리면', font=FBW, fill=TXT, anchor='mm')
+    d.rectangle([0, 900, W, H], fill=(214, 204, 186)); d.line([540, 150, 540, 900], fill=(210, 216, 226), width=6)
+    # 왼쪽: 기울어진 컵에서 큰 물덩이가 '뚝'
+    cx, cy = 180, 280
+    def rot(px, py, a=math.radians(112)):
+        return (cx + px*math.cos(a) - py*math.sin(a), cy + px*math.sin(a) + py*math.cos(a))
+    body = [rot(-70, -110), rot(70, -110), rot(55, 110), rot(-55, 110)]          # 위가 넓은 컵, 오른쪽으로 기울임
+    water = [rot(-70, -110), rot(70, -110), rot(62, -10), rot(-62, -10)]
+    d.polygon(body, fill=(226, 236, 246)); d.polygon(water, fill=(150, 196, 236))
+    d.line(body + [body[0]], fill=(170, 186, 206), width=8)
+    ph = (t % 1.2)
+    if ph < 0.6:
+        mx, my = rot(0, -150)
+        y = my + (ph/0.6)**2*(880-my)
+        d.ellipse([mx-32, y-34, mx+32, y+34], fill=(110, 160, 226))
+    else:
+        mx, my = rot(0, -150); u = (ph-0.6)/0.6; d.ellipse([mx-52-40*u, 880, mx+52+40*u, 910], fill=(140, 180, 230))
+    # 오른쪽: 분무기에서 아주 작은 물방울이 둥둥
+    sx, sy = 900, 260
+    d.rounded_rectangle([sx-40, sy-20, sx+60, sy+170], radius=24, fill=(150, 200, 170))
+    d.rectangle([sx-70, sy-40, sx+40, sy], fill=(120, 170, 140)); d.rectangle([sx-100, sy-30, sx-70, sy-12], fill=(120, 170, 140))
+    random.seed(11)
+    for puff in range(6):
+        born = puff*1.4
+        if t < born: continue
+        age = t-born
+        for j in range(18):
+            ang = random.uniform(-0.5, 0.5); sp = random.uniform(120, 220)
+            dx = -min(age, 0.5)*sp*math.cos(ang)*2
+            x = sx-110 + dx + 12*math.sin(age*2+j)
+            y = sy-20 + min(age, 0.5)*sp*math.sin(ang)*2 + age*28
+            if y < 890: d.ellipse([x-5, y-5, x+5, y+5], fill=(110, 160, 226))
+    return im
+
+CD1 = int(9.5*F)
+def cd_s1(i, n):
+    if i/F < 3.0: return cl_s1(int((i/F+0.6)*F), n)
+    t = i/F - 3.0; im = cup_vs_spray(t)
+    lab(im, '크면: 뚝!', (270, 960), LT, t, 0.8)
+    lab(im, '작으면: 둥둥', (800, 960), LM, t, 2.2)
+    return im
+
+CD2 = 10*F
+def cd_s2(i, n):
+    t = i/F; im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im); sky_bg(d, (150, 180, 214), (214, 226, 240))
+    d.text((W/2, 80), '구름 속을 보면', font=FBW, fill=TXT, anchor='mm')
+    random.seed(5); drops = [(random.uniform(80, 1000), random.uniform(200, 760), random.uniform(0, 6)) for _ in range(110)]
+    merge = ease((t-5.0)/1.5); tx, ty = 560, 520
+    for k, (x, y, ph) in enumerate(drops):
+        x += 10*math.sin(t*2+ph); y += 8*math.cos(t*1.7+ph)
+        if k < 14:
+            x = x+(tx-x)*merge; y = y+(ty-y)*merge
+            if merge >= 1: continue
+        d.ellipse([x-5, y-5, x+5, y+5], fill=(120, 170, 230))
+    if merge >= 1:
+        u = t-6.5; y = ty+max(0, u-0.4)**2*380
+        d.polygon([(tx, y-60), (tx-36, y+10), (tx+36, y+10)], fill=(90, 140, 220)); d.ellipse([tx-38, y-14, tx+38, y+54], fill=(90, 140, 220))
+    lab(im, '분무기보다 더 작아', (330, 200), LM, t, 0.6)
+    lab(im, '뭉치면: 비', (820, 560), LG, t, 6.6)
+    return im
+
+if __name__ == '__main__' and sys.argv[1] == 'cloud':
+    build('cloud5', cd_s1, CD1, cd_s2, CD2, sys.argv[2], preview=[(cd_s1, int(1.5*F), CD1), (cd_s1, int(6.5*F), CD1), (cd_s2, int(3*F), CD2), (cd_s2, int(8*F), CD2)])
