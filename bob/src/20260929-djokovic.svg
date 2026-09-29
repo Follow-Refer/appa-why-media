@@ -1,0 +1,53 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR">
+<rect width="1080" height="1350" fill="#F4EDE0"/>
+<text x="110" y="150" font-size="36" font-weight="700" fill="#2F4A3A">밥이지 · 셀럽의 아침</text>
+<text x="110" y="270" font-size="104" font-weight="900" fill="#1F2A22">조코비치의</text>
+<text x="110" y="390" font-size="104" font-weight="900" fill="#1F2A22">파워볼 아침</text>
+<rect x="110" y="430" width="120" height="10" rx="5" fill="#D8553F"/>
+
+<g transform="translate(0,560)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M150 -44 H196 L190 44 H156 Z" fill="#BFD9E0"/>
+<path d="M153 -10 H193 L190 44 H156 Z" fill="#8DBCC9"/>
+<path d="M214 -8 H254 L250 40 C250 50 218 50 218 40 Z" fill="#E6A93A"/>
+<rect x="210" y="-22" width="48" height="16" rx="5" fill="#C98A2A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">상온 물 한 잔 + 꿀 2스푼</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">일어나자마자 (본인 루틴)</text>
+</g>
+
+<g transform="translate(0,760)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M140 -6 H260 C260 34 234 52 200 52 C166 52 140 34 140 -6 Z" fill="#2F4A3A"/>
+<ellipse cx="200" cy="-6" rx="60" ry="14" fill="#D9B98A"/>
+<circle cx="178" cy="-10" r="5" fill="#B08455"/>
+<circle cx="204" cy="-4" r="5" fill="#B08455"/>
+<circle cx="224" cy="-11" r="4" fill="#8A5A3A"/>
+<circle cx="190" cy="-2" r="3" fill="#8A5A3A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">뮤즐리 한 그릇</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">불 없이 붓기만 하면 돼요</text>
+</g>
+
+<g transform="translate(0,960)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M150 20 C160 -30 210 -46 244 -30 C214 -22 184 0 170 30 Z" fill="#F2C94C"/>
+<ellipse cx="190" cy="30" rx="16" ry="11" fill="#B07A4A"/>
+<ellipse cx="222" cy="24" rx="13" ry="10" fill="#C98A5A"/>
+<circle cx="232" cy="-2" r="11" fill="#3C4B8C"/>
+<circle cx="250" cy="14" r="10" fill="#44559A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">견과 한 봉 + 바나나·베리</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">뜯고, 썰고, 올리기</text>
+</g>
+
+<g transform="translate(0,1160)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M170 -30 L200 -52 L230 -30 V50 H170 Z" fill="#FFFFFF"/>
+<path d="M170 -30 L200 -52 L230 -30 Z" fill="#D9CDB6"/>
+<rect x="170" y="-4" width="60" height="30" fill="#8A9A3B"/>
+<ellipse cx="200" cy="11" rx="10" ry="7" fill="#F4EDE0"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">아몬드 음료 부어서 끝</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">190ml 한 팩이 딱 한 그릇</text>
+</g>
+
+<text x="110" y="1300" font-size="30" font-weight="500" fill="#6B6B5E">출처: 조코비치 저서 『Serve to Win』</text>
+<text x="970" y="1300" text-anchor="end" font-size="30" font-weight="700" fill="#2F4A3A">@iambob.easy</text>
+</svg>
