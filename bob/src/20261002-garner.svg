@@ -1,0 +1,47 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR">
+<rect width="1080" height="1350" fill="#F4EDE0"/>
+<text x="110" y="150" font-size="36" font-weight="700" fill="#2F4A3A">밥이지 · 셀럽의 아침</text>
+<text x="110" y="270" font-size="104" font-weight="900" fill="#1F2A22">제니퍼 가너의</text>
+<text x="110" y="390" font-size="104" font-weight="900" fill="#1F2A22">요거트 파르페</text>
+<rect x="110" y="430" width="120" height="10" rx="5" fill="#D8553F"/>
+
+<g transform="translate(0,560)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<rect x="160" y="-34" width="64" height="74" rx="10" fill="#FFFFFF"/>
+<path d="M224 -18 C252 -18 252 24 224 24" stroke="#FFFFFF" stroke-width="10" fill="none"/>
+<rect x="166" y="-26" width="52" height="16" rx="4" fill="#5A3A2A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">블랙커피 한 잔</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">"커피, 그리고 또 커피" (본인 말)</text>
+</g>
+
+<g transform="translate(0,760)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M158 -40 H242 L232 48 H168 Z" fill="#FFFFFF"/>
+<path d="M162 -10 H238 L232 48 H168 Z" fill="#F7F3EA"/>
+<ellipse cx="200" cy="-40" rx="42" ry="10" fill="#F7F3EA"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">그릭요거트 한 컵</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">본인은 풀팻 요거트, 밥이지는 그릭</text>
+</g>
+
+<g transform="translate(0,960)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<circle cx="176" cy="-12" r="20" fill="#4A5A9A"/>
+<circle cx="220" cy="-16" r="20" fill="#C9475A"/>
+<circle cx="198" cy="24" r="20" fill="#3A3A6A"/>
+<circle cx="236" cy="22" r="16" fill="#4A5A9A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">냉동 베리 한 줌</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">전날 밤 냉장실로 옮겨 두기</text>
+</g>
+
+<g transform="translate(0,1160)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<ellipse cx="172" cy="-10" rx="16" ry="26" fill="#C98A5A" transform="rotate(-25 172 -10)"/>
+<ellipse cx="226" cy="-14" rx="24" ry="20" fill="#A8703F"/>
+<path d="M176 30 C176 8 216 8 216 30 C216 44 176 44 176 30 Z" fill="#E2B77A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">하루견과 한 봉</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">맨 위에 톡, 컵에 층층이 끝</text>
+</g>
+
+<text x="110" y="1300" font-size="30" font-weight="500" fill="#6B6B5E">출처: Harper's BAZAAR 영상 인터뷰</text>
+<text x="970" y="1300" text-anchor="end" font-size="30" font-weight="700" fill="#2F4A3A">@iambob.easy</text>
+</svg>
