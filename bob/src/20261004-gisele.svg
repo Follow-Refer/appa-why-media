@@ -1,0 +1,44 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR">
+<rect width="1080" height="1350" fill="#F4EDE0"/>
+<text x="110" y="150" font-size="36" font-weight="700" fill="#2F4A3A">밥이지 · 셀럽의 아침</text>
+<text x="110" y="270" font-size="104" font-weight="900" fill="#1F2A22">지젤 번천</text>
+<text x="110" y="390" font-size="104" font-weight="900" fill="#1F2A22">바나나 스무디</text>
+<rect x="110" y="430" width="120" height="10" rx="5" fill="#D8553F"/>
+
+<g transform="translate(0,560)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M150 -20 C170 40 240 40 256 -6 C236 18 186 18 162 -26 Z" fill="#F2C94C"/>
+<rect x="146" y="-32" width="12" height="14" rx="3" fill="#6B5A2E"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">얼린 바나나</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">매일 마시는 과일 스무디 베이스 (본인 책)</text>
+</g>
+
+<g transform="translate(0,760)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M170 -40 H230 L222 40 H178 Z" fill="#FFFFFF"/>
+<path d="M174 -14 H226 L221 34 H179 Z" fill="#F2994A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">과일 주스</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">물 대신 주스로 갈아요 (본인 레시피)</text>
+</g>
+
+<g transform="translate(0,960)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<ellipse cx="176" cy="-6" rx="16" ry="26" fill="#C98A5A" transform="rotate(-25 176 -6)"/>
+<ellipse cx="222" cy="-4" rx="16" ry="26" fill="#B5784A" transform="rotate(20 222 -4)"/>
+<ellipse cx="200" cy="30" rx="15" ry="22" fill="#D29A66" transform="rotate(90 200 30)"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">아몬드 한 줌</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">밥이지: 하루견과 한 봉으로 대신</text>
+</g>
+
+<g transform="translate(0,1160)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M168 -44 H232 L222 18 H178 Z" fill="#FFFFFF"/>
+<rect x="166" y="18" width="68" height="28" rx="6" fill="#2F4A3A"/>
+<circle cx="200" cy="32" r="6" fill="#EADFCB"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">믹서 30초</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">재료는 3~4개만, 불 없이 끝</text>
+</g>
+
+<text x="110" y="1300" font-size="30" font-weight="500" fill="#6B6B5E">출처: 저서 'Nourish' (GMA 등 보도)</text>
+<text x="970" y="1300" text-anchor="end" font-size="30" font-weight="700" fill="#2F4A3A">@iambob.easy</text>
+</svg>
