@@ -1,0 +1,43 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR">
+<rect width="1080" height="1350" fill="#F4EDE0"/>
+<text x="110" y="150" font-size="36" font-weight="700" fill="#2F4A3A">밥이지 · 셀럽의 아침</text>
+<text x="110" y="270" font-size="104" font-weight="900" fill="#1F2A22">벨라 하디드</text>
+<text x="110" y="390" font-size="104" font-weight="900" fill="#1F2A22">베이글 에그</text>
+<rect x="110" y="430" width="120" height="10" rx="5" fill="#D8553F"/>
+
+<g transform="translate(0,560)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<ellipse cx="200" cy="0" rx="52" ry="40" fill="#D9A35F"/>
+<ellipse cx="200" cy="0" rx="16" ry="12" fill="#EADFCB"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">플레인 베이글</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">단골 메뉴의 빵 (본인 말)</text>
+</g>
+
+<g transform="translate(0,760)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<ellipse cx="200" cy="0" rx="40" ry="50" fill="#FFFFFF"/>
+<circle cx="200" cy="6" r="20" fill="#F2C94C"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">구운란 2알</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">밥이지: 계란 요리 대신 불 없이</text>
+</g>
+
+<g transform="translate(0,960)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<rect x="168" y="-36" width="26" height="70" rx="10" fill="#FFFFFF"/>
+<rect x="206" y="-36" width="26" height="70" rx="10" fill="#2F4A3A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">소금·후추 톡</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">포크로 으깬 계란 위에 살짝</text>
+</g>
+
+<g transform="translate(0,1160)">
+<circle cx="200" cy="0" r="80" fill="#EADFCB"/>
+<path d="M148 -6 A52 30 0 0 1 252 -6 Z" fill="#D9A35F"/>
+<rect x="150" y="-2" width="100" height="14" rx="6" fill="#F2C94C"/>
+<path d="M148 16 A52 24 0 0 0 252 16 Z" fill="#C98A4A"/>
+<text x="320" y="-8" font-size="50" font-weight="900" fill="#1F2A22">덮으면 끝</text>
+<text x="320" y="46" font-size="34" font-weight="500" fill="#6B6B5E">토스터 1분은 선택, 3분 컷</text>
+</g>
+
+<text x="110" y="1300" font-size="30" font-weight="500" fill="#6B6B5E">출처: Harper's BAZAAR 인터뷰 (2017)</text>
+<text x="970" y="1300" text-anchor="end" font-size="30" font-weight="700" fill="#2F4A3A">@iambob.easy</text>
+</svg>
