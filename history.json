@@ -1,165 +1,177 @@
 [
- {
-  "date": "2026-09-27",
-  "question": "아빠, 달이 왜 자꾸 우리 따라와?",
-  "category": "과학·자연",
-  "media": "moon_parallax.mp4",
-  "sources": [
-   "NASA Science — Moon: Earth-Moon distance about 384,400 km",
-   "시차(parallax) 원리 — 천문학 교과 개념"
-  ]
- },
- {
-  "date": "2026-09-27",
-  "question": "아빠, 나뭇잎이 왜 빨개지고 노래져?",
-  "category": "과학·자연",
-  "media": "20260927-autumn-leaves.mp4",
-  "sources": [
-   "USDA Forest Service — Science of Fall Colors (https://www.fs.usda.gov/visit/fall-colors/science-of-fall-colors)",
-   "Iowa State Univ. Extension — The Science Behind Fall Color (https://yardandgarden.extension.iastate.edu/how-to/science-behind-fall-color)",
-   "Ohio State Univ. Ohioline — Fall Color (https://ohioline.osu.edu/factsheet/anr-0145)",
-   "NASA Earthdata — Why Do Leaves Change Color? (https://www.earthdata.nasa.gov/learn/data-in-action/why-do-leaves-change-color)",
-   "UC ANR — Fall colors (https://ucanr.edu/blog/real-dirt/article/fall-colors)",
-   "Morton Arboretum — Seasonal needle drop (https://mortonarb.org/plant-and-protect/tree-plant-care/plant-care-resources/seasonal-needle-drop/)",
-   "경향신문 2023-11-22 은행잎 단풍·떨켜 (https://www.khan.co.kr/national/national-general/article/202311222120025)"
-  ]
- },
- {
-  "date": "2026-09-27",
-  "question": "아빠, 이 글자 누가 만들었어?",
-  "category": "문화",
-  "media": "20260928-hangeul-mouth.mp4",
-  "sources": [
-   "한국민족문화대백과사전 — 훈민정음 (encykorea.aks.ac.kr/Article/E0065805)",
-   "한국민족문화대백과사전 — 훈민정음 28자모 (E0074518)",
-   "국사편찬위원회 우리역사넷 — 제자의 원리",
-   "국립한글박물관 웹진 2018.10 — 한글날 유래",
-   "국립민속박물관 — 한글 (28자→24자)"
-  ],
-  "note": "2026-09-27 아이 말·입 모양 영상으로 다시 씀 (구 20260928-hangeul-shapes.mp4)"
- },
- {
-  "date": "2026-09-27",
-  "question": "아빠, 돈은 누가 만들어?",
-  "category": "생활 경제",
-  "media": "20260927-money-journey.mp4",
-  "sources": [
-   "한국은행 — 화폐는 어떻게 사람들 손에 들어올까 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10085714&menuNo=200387)",
-   "한국은행 — 한국은행법을 통해 살펴보는 우리나라 화폐 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10067510&menuNo=200387)",
-   "KTV — 제조에서 폐기까지 돈의 일생 (https://www.ktv.go.kr/content/view?content_id=310402)",
-   "프라임경제 — 조폐공사 부여 제지본부 르포 (https://www.newsprime.co.kr/news/article/?no=333871)",
-   "이투데이 — 조폐공사 경산 화폐본부 르포 (https://www.etoday.co.kr/news/view/1243651)",
-   "경향신문 2019-06-19 조폐공사 (https://www.khan.co.kr/economy/economy-general/article/201906192115005)",
-   "서울신문 2026-01-13 손상화폐 폐기·교환 기준 (https://www.seoul.co.kr/news/economy/finance/2026/01/13/20260113500273)",
-   "KTV 카드뉴스 — 손상 화폐 폐기 (https://m.ktv.go.kr/program/again/view?content_id=515740)",
-   "이데일리 2023 — 손상 지폐 대부분 소각 (https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02036886635774232)"
-  ]
- },
- {
-  "date": "2026-09-28",
-  "question": "아빠, 귀뚜라미는 입으로 노래해?",
-  "category": "과학·자연",
-  "media": "20260928-cricket-song.mp4",
-  "sources": [
-   "Smithsonian — Why Don't Female Crickets Chirp?",
-   "WSU Ask Dr. Universe — Why do crickets make sound?",
-   "소년한국일보 — 귀뚜라미·방아깨비·여치·메뚜기",
-   "한국민족문화대백과사전 — 귀뚜라미",
-   "Old Farmer's Almanac / ScienceABC — Dolbear's law"
-  ]
- },
- {
-  "date": "2026-09-28",
-  "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
-  "category": "과학·자연",
-  "media": "",
-  "sources": [
-   "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
-   "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
-   "Haseleu et al. 2014 PLOS One (재현 실패)",
-   "Davis 2021 PLOS One (악력 감소 재지지)",
-   "Cleveland Clinic — Why water makes your skin look like a prune",
-   "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
-  ],
-  "topic_no": 1,
-  "note": "보류: 손가락 속 단면을 그려야 해서 영상 기준에 안 맞음 (고양이 눈으로 교체)"
- },
- {
-  "date": "2026-09-28",
-  "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
-  "category": "과학·자연",
-  "media": "",
-  "sources": [
-   "Cleveland Clinic — Hiccups",
-   "StatPearls NBK538225 — Hiccups",
-   "Merck Manual — Hiccups",
-   "UCL News 2019 — newborn hiccups & brain development",
-   "BJGP 2016 — hiccups review"
-  ],
-  "topic_no": 2,
-  "note": "보류: 몸속을 그려야 해서 영상 기준에 안 맞음 (2026-09-28 그림자로 교체)"
- },
- {
-  "date": "2026-09-28",
-  "question": "아빠, 얘가 자꾸 나 따라와!",
-  "category": "과학·자연",
-  "media": "20260928-shadow-follows.mp4",
-  "sources": [
-   "NZ Science Learning Hub — Light and shadows",
-   "EBSCO Research Starters — Shadow",
-   "Exploratorium — Outdoor Shadows",
-   "California Academy of Sciences — Which way is north (shadow length)",
-   "UIUC Physics Van — multiple light sources, multiple shadows"
-  ],
-  "topic_no": 3
- },
- {
-  "date": "2026-09-28",
-  "question": "아빠, 고양이 눈에 불 켜졌어!",
-  "category": "과학·자연",
-  "media": "20260928-cat-eyes.mp4",
-  "sources": [
-   "Texas Parks & Wildlife — Eyeshine",
-   "The Conversation — Why do cats' eyes glow in the dark",
-   "Wikipedia — Tapetum lucidum / Cat senses",
-   "Panthera — Spooky science: glowing eyes of cats",
-   "Sci Rep 2018 — eyeshine only when dark-adapted"
-  ],
-  "topic_no": 14
- },
- {
-  "date": "2026-09-29",
-  "question": "아빠, 빨대 부러졌어!",
-  "category": "과학·자연",
-  "media": "20260929-straw.mp4",
-  "sources": [
-   "IOP Spark — Reappearing coin",
-   "IOP — Vanishing coin"
-  ]
- },
- {
-  "date": "2026-09-29",
-  "question": "아빠, 모기는 왜 나만 물어?",
-  "category": "과학·자연",
-  "media": "20260929-mosquito.mp4",
-  "sources": [
-   "Rockefeller Univ — Why mosquitoes bite some people more (2022)",
-   "Cell 2022 De Obaldia et al.",
-   "NIH Research Matters",
-   "EPA — Mosquito life cycle",
-   "Pitt Immunology — why bites itch"
-  ]
- },
- {
-  "date": "2026-09-29",
-  "question": "아빠, 풍선 날아갔어! 하늘 끝까지 가?",
-  "category": "과학·자연",
-  "media": "20260929-balloon.mp4",
-  "sources": [
-   "BalloonHQ — release study (Burchette)",
-   "UCAR — weather balloons",
-   "Sci Rep 2019 — marine debris seabirds",
-   "CPSC — latex balloon choking"
-  ]
- }
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 달이 왜 자꾸 우리 따라와?",
+    "category": "과학·자연",
+    "media": "moon_parallax.mp4",
+    "sources": [
+      "NASA Science — Moon: Earth-Moon distance about 384,400 km",
+      "시차(parallax) 원리 — 천문학 교과 개념"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 나뭇잎이 왜 빨개지고 노래져?",
+    "category": "과학·자연",
+    "media": "20260927-autumn-leaves.mp4",
+    "sources": [
+      "USDA Forest Service — Science of Fall Colors (https://www.fs.usda.gov/visit/fall-colors/science-of-fall-colors)",
+      "Iowa State Univ. Extension — The Science Behind Fall Color (https://yardandgarden.extension.iastate.edu/how-to/science-behind-fall-color)",
+      "Ohio State Univ. Ohioline — Fall Color (https://ohioline.osu.edu/factsheet/anr-0145)",
+      "NASA Earthdata — Why Do Leaves Change Color? (https://www.earthdata.nasa.gov/learn/data-in-action/why-do-leaves-change-color)",
+      "UC ANR — Fall colors (https://ucanr.edu/blog/real-dirt/article/fall-colors)",
+      "Morton Arboretum — Seasonal needle drop (https://mortonarb.org/plant-and-protect/tree-plant-care/plant-care-resources/seasonal-needle-drop/)",
+      "경향신문 2023-11-22 은행잎 단풍·떨켜 (https://www.khan.co.kr/national/national-general/article/202311222120025)"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 이 글자 누가 만들었어?",
+    "category": "문화",
+    "media": "20260928-hangeul-mouth.mp4",
+    "sources": [
+      "한국민족문화대백과사전 — 훈민정음 (encykorea.aks.ac.kr/Article/E0065805)",
+      "한국민족문화대백과사전 — 훈민정음 28자모 (E0074518)",
+      "국사편찬위원회 우리역사넷 — 제자의 원리",
+      "국립한글박물관 웹진 2018.10 — 한글날 유래",
+      "국립민속박물관 — 한글 (28자→24자)"
+    ],
+    "note": "2026-09-27 아이 말·입 모양 영상으로 다시 씀 (구 20260928-hangeul-shapes.mp4)"
+  },
+  {
+    "date": "2026-09-27",
+    "question": "아빠, 돈은 누가 만들어?",
+    "category": "생활 경제",
+    "media": "20260927-money-journey.mp4",
+    "sources": [
+      "한국은행 — 화폐는 어떻게 사람들 손에 들어올까 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10085714&menuNo=200387)",
+      "한국은행 — 한국은행법을 통해 살펴보는 우리나라 화폐 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10067510&menuNo=200387)",
+      "KTV — 제조에서 폐기까지 돈의 일생 (https://www.ktv.go.kr/content/view?content_id=310402)",
+      "프라임경제 — 조폐공사 부여 제지본부 르포 (https://www.newsprime.co.kr/news/article/?no=333871)",
+      "이투데이 — 조폐공사 경산 화폐본부 르포 (https://www.etoday.co.kr/news/view/1243651)",
+      "경향신문 2019-06-19 조폐공사 (https://www.khan.co.kr/economy/economy-general/article/201906192115005)",
+      "서울신문 2026-01-13 손상화폐 폐기·교환 기준 (https://www.seoul.co.kr/news/economy/finance/2026/01/13/20260113500273)",
+      "KTV 카드뉴스 — 손상 화폐 폐기 (https://m.ktv.go.kr/program/again/view?content_id=515740)",
+      "이데일리 2023 — 손상 지폐 대부분 소각 (https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02036886635774232)"
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "question": "아빠, 귀뚜라미는 입으로 노래해?",
+    "category": "과학·자연",
+    "media": "20260928-cricket-song.mp4",
+    "sources": [
+      "Smithsonian — Why Don't Female Crickets Chirp?",
+      "WSU Ask Dr. Universe — Why do crickets make sound?",
+      "소년한국일보 — 귀뚜라미·방아깨비·여치·메뚜기",
+      "한국민족문화대백과사전 — 귀뚜라미",
+      "Old Farmer's Almanac / ScienceABC — Dolbear's law"
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
+    "category": "과학·자연",
+    "media": "",
+    "sources": [
+      "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
+      "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
+      "Haseleu et al. 2014 PLOS One (재현 실패)",
+      "Davis 2021 PLOS One (악력 감소 재지지)",
+      "Cleveland Clinic — Why water makes your skin look like a prune",
+      "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
+    ],
+    "topic_no": 1,
+    "note": "보류: 손가락 속 단면을 그려야 해서 영상 기준에 안 맞음 (고양이 눈으로 교체)"
+  },
+  {
+    "date": "2026-09-28",
+    "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
+    "category": "과학·자연",
+    "media": "",
+    "sources": [
+      "Cleveland Clinic — Hiccups",
+      "StatPearls NBK538225 — Hiccups",
+      "Merck Manual — Hiccups",
+      "UCL News 2019 — newborn hiccups & brain development",
+      "BJGP 2016 — hiccups review"
+    ],
+    "topic_no": 2,
+    "note": "보류: 몸속을 그려야 해서 영상 기준에 안 맞음 (2026-09-28 그림자로 교체)"
+  },
+  {
+    "date": "2026-09-28",
+    "question": "아빠, 얘가 자꾸 나 따라와!",
+    "category": "과학·자연",
+    "media": "20260928-shadow-follows.mp4",
+    "sources": [
+      "NZ Science Learning Hub — Light and shadows",
+      "EBSCO Research Starters — Shadow",
+      "Exploratorium — Outdoor Shadows",
+      "California Academy of Sciences — Which way is north (shadow length)",
+      "UIUC Physics Van — multiple light sources, multiple shadows"
+    ],
+    "topic_no": 3
+  },
+  {
+    "date": "2026-09-28",
+    "question": "아빠, 고양이 눈에 불 켜졌어!",
+    "category": "과학·자연",
+    "media": "20260928-cat-eyes.mp4",
+    "sources": [
+      "Texas Parks & Wildlife — Eyeshine",
+      "The Conversation — Why do cats' eyes glow in the dark",
+      "Wikipedia — Tapetum lucidum / Cat senses",
+      "Panthera — Spooky science: glowing eyes of cats",
+      "Sci Rep 2018 — eyeshine only when dark-adapted"
+    ],
+    "topic_no": 14
+  },
+  {
+    "date": "2026-09-29",
+    "question": "아빠, 빨대 부러졌어!",
+    "category": "과학·자연",
+    "media": "20260929-straw.mp4",
+    "sources": [
+      "IOP Spark — Reappearing coin",
+      "IOP — Vanishing coin"
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "question": "아빠, 모기는 왜 나만 물어?",
+    "category": "과학·자연",
+    "media": "20260929-mosquito.mp4",
+    "sources": [
+      "Rockefeller Univ — Why mosquitoes bite some people more (2022)",
+      "Cell 2022 De Obaldia et al.",
+      "NIH Research Matters",
+      "EPA — Mosquito life cycle",
+      "Pitt Immunology — why bites itch"
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "question": "아빠, 풍선 날아갔어! 하늘 끝까지 가?",
+    "category": "과학·자연",
+    "media": "20260929-balloon.mp4",
+    "sources": [
+      "BalloonHQ — release study (Burchette)",
+      "UCAR — weather balloons",
+      "Sci Rep 2019 — marine debris seabirds",
+      "CPSC — latex balloon choking"
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "question": "아빠, 내 코가 보여!",
+    "category": "과학·자연",
+    "media": "20261105-nose-see.mp4",
+    "sources": [
+      "Live Science 2026-01 — Why don't you usually see your nose? (M. Webster, UNR)",
+      "IFLScience 2026-04 — binocular transparency (E. Quiroga Rodríguez review)",
+      "CEENTA — why can't I see my nose",
+      "Britannica — Human sensory reception (adaptation to clothing pressure)"
+    ]
+  }
 ]
