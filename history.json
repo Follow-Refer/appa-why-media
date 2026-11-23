@@ -1,463 +1,463 @@
 [
-  {
-    "date": "2026-09-27",
-    "question": "아빠, 달이 왜 자꾸 우리 따라와?",
-    "category": "과학·자연",
-    "media": "moon_parallax.mp4",
-    "sources": [
-      "NASA Science — Moon: Earth-Moon distance about 384,400 km",
-      "시차(parallax) 원리 — 천문학 교과 개념"
-    ]
-  },
-  {
-    "date": "2026-09-27",
-    "question": "아빠, 나뭇잎이 왜 빨개지고 노래져?",
-    "category": "과학·자연",
-    "media": "20260927-autumn-leaves.mp4",
-    "sources": [
-      "USDA Forest Service — Science of Fall Colors (https://www.fs.usda.gov/visit/fall-colors/science-of-fall-colors)",
-      "Iowa State Univ. Extension — The Science Behind Fall Color (https://yardandgarden.extension.iastate.edu/how-to/science-behind-fall-color)",
-      "Ohio State Univ. Ohioline — Fall Color (https://ohioline.osu.edu/factsheet/anr-0145)",
-      "NASA Earthdata — Why Do Leaves Change Color? (https://www.earthdata.nasa.gov/learn/data-in-action/why-do-leaves-change-color)",
-      "UC ANR — Fall colors (https://ucanr.edu/blog/real-dirt/article/fall-colors)",
-      "Morton Arboretum — Seasonal needle drop (https://mortonarb.org/plant-and-protect/tree-plant-care/plant-care-resources/seasonal-needle-drop/)",
-      "경향신문 2023-11-22 은행잎 단풍·떨켜 (https://www.khan.co.kr/national/national-general/article/202311222120025)"
-    ]
-  },
-  {
-    "date": "2026-09-27",
-    "question": "아빠, 이 글자 누가 만들었어?",
-    "category": "문화",
-    "media": "20260928-hangeul-mouth.mp4",
-    "sources": [
-      "한국민족문화대백과사전 — 훈민정음 (encykorea.aks.ac.kr/Article/E0065805)",
-      "한국민족문화대백과사전 — 훈민정음 28자모 (E0074518)",
-      "국사편찬위원회 우리역사넷 — 제자의 원리",
-      "국립한글박물관 웹진 2018.10 — 한글날 유래",
-      "국립민속박물관 — 한글 (28자→24자)"
-    ],
-    "note": "2026-09-27 아이 말·입 모양 영상으로 다시 씀 (구 20260928-hangeul-shapes.mp4)"
-  },
-  {
-    "date": "2026-09-27",
-    "question": "아빠, 돈은 누가 만들어?",
-    "category": "생활 경제",
-    "media": "20260927-money-journey.mp4",
-    "sources": [
-      "한국은행 — 화폐는 어떻게 사람들 손에 들어올까 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10085714&menuNo=200387)",
-      "한국은행 — 한국은행법을 통해 살펴보는 우리나라 화폐 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10067510&menuNo=200387)",
-      "KTV — 제조에서 폐기까지 돈의 일생 (https://www.ktv.go.kr/content/view?content_id=310402)",
-      "프라임경제 — 조폐공사 부여 제지본부 르포 (https://www.newsprime.co.kr/news/article/?no=333871)",
-      "이투데이 — 조폐공사 경산 화폐본부 르포 (https://www.etoday.co.kr/news/view/1243651)",
-      "경향신문 2019-06-19 조폐공사 (https://www.khan.co.kr/economy/economy-general/article/201906192115005)",
-      "서울신문 2026-01-13 손상화폐 폐기·교환 기준 (https://www.seoul.co.kr/news/economy/finance/2026/01/13/20260113500273)",
-      "KTV 카드뉴스 — 손상 화폐 폐기 (https://m.ktv.go.kr/program/again/view?content_id=515740)",
-      "이데일리 2023 — 손상 지폐 대부분 소각 (https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02036886635774232)"
-    ]
-  },
-  {
-    "date": "2026-09-28",
-    "question": "아빠, 귀뚜라미는 입으로 노래해?",
-    "category": "과학·자연",
-    "media": "20260928-cricket-song.mp4",
-    "sources": [
-      "Smithsonian — Why Don't Female Crickets Chirp?",
-      "WSU Ask Dr. Universe — Why do crickets make sound?",
-      "소년한국일보 — 귀뚜라미·방아깨비·여치·메뚜기",
-      "한국민족문화대백과사전 — 귀뚜라미",
-      "Old Farmer's Almanac / ScienceABC — Dolbear's law"
-    ]
-  },
-  {
-    "date": "2026-09-28",
-    "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
-    "category": "과학·자연",
-    "media": "",
-    "sources": [
-      "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
-      "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
-      "Haseleu et al. 2014 PLOS One (재현 실패)",
-      "Davis 2021 PLOS One (악력 감소 재지지)",
-      "Cleveland Clinic — Why water makes your skin look like a prune",
-      "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
-    ],
-    "topic_no": 1,
-    "note": "보류: 손가락 속 단면을 그려야 해서 영상 기준에 안 맞음 (고양이 눈으로 교체)"
-  },
-  {
-    "date": "2026-09-28",
-    "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
-    "category": "과학·자연",
-    "media": "",
-    "sources": [
-      "Cleveland Clinic — Hiccups",
-      "StatPearls NBK538225 — Hiccups",
-      "Merck Manual — Hiccups",
-      "UCL News 2019 — newborn hiccups & brain development",
-      "BJGP 2016 — hiccups review"
-    ],
-    "topic_no": 2,
-    "note": "보류: 몸속을 그려야 해서 영상 기준에 안 맞음 (2026-09-28 그림자로 교체)"
-  },
-  {
-    "date": "2026-09-28",
-    "question": "아빠, 얘가 자꾸 나 따라와!",
-    "category": "과학·자연",
-    "media": "20260928-shadow-follows.mp4",
-    "sources": [
-      "NZ Science Learning Hub — Light and shadows",
-      "EBSCO Research Starters — Shadow",
-      "Exploratorium — Outdoor Shadows",
-      "California Academy of Sciences — Which way is north (shadow length)",
-      "UIUC Physics Van — multiple light sources, multiple shadows"
-    ],
-    "topic_no": 3
-  },
-  {
-    "date": "2026-09-28",
-    "question": "아빠, 고양이 눈에 불 켜졌어!",
-    "category": "과학·자연",
-    "media": "20260928-cat-eyes.mp4",
-    "sources": [
-      "Texas Parks & Wildlife — Eyeshine",
-      "The Conversation — Why do cats' eyes glow in the dark",
-      "Wikipedia — Tapetum lucidum / Cat senses",
-      "Panthera — Spooky science: glowing eyes of cats",
-      "Sci Rep 2018 — eyeshine only when dark-adapted"
-    ],
-    "topic_no": 14
-  },
-  {
-    "date": "2026-09-29",
-    "question": "아빠, 빨대 부러졌어!",
-    "category": "과학·자연",
-    "media": "20260929-straw.mp4",
-    "sources": [
-      "IOP Spark — Reappearing coin",
-      "IOP — Vanishing coin"
-    ]
-  },
-  {
-    "date": "2026-09-29",
-    "question": "아빠, 모기는 왜 나만 물어?",
-    "category": "과학·자연",
-    "media": "20260929-mosquito.mp4",
-    "sources": [
-      "Rockefeller Univ — Why mosquitoes bite some people more (2022)",
-      "Cell 2022 De Obaldia et al.",
-      "NIH Research Matters",
-      "EPA — Mosquito life cycle",
-      "Pitt Immunology — why bites itch"
-    ]
-  },
-  {
-    "date": "2026-09-29",
-    "question": "아빠, 풍선 날아갔어! 하늘 끝까지 가?",
-    "category": "과학·자연",
-    "media": "20260929-balloon.mp4",
-    "sources": [
-      "BalloonHQ — release study (Burchette)",
-      "UCAR — weather balloons",
-      "Sci Rep 2019 — marine debris seabirds",
-      "CPSC — latex balloon choking"
-    ]
-  },
-  {
-    "date": "2026-11-05",
-    "question": "아빠, 내 코가 보여!",
-    "category": "과학·자연",
-    "media": "20261105-nose-see.mp4",
-    "sources": [
-      "Live Science 2026-01 — Why don't you usually see your nose? (M. Webster, UNR)",
-      "IFLScience 2026-04 — binocular transparency (E. Quiroga Rodríguez review)",
-      "CEENTA — why can't I see my nose",
-      "Britannica — Human sensory reception (adaptation to clothing pressure)"
-    ]
-  },
-  {
-    "date": "2026-11-06",
-    "question": "아빠, 내가 하면 왜 안 간지러워?",
-    "category": "과학·자연",
-    "media": "20261106-self-tickle.mp4",
-    "sources": [
-      "Blakemore, Frith & Wolpert 1999, J Cogn Neurosci 11:551 — robot delay 0~300ms / rotation 0~90°",
-      "Blakemore, Wolpert & Frith 1998, Nature Neuroscience 1:635 — cerebellum, central cancellation; delay 0~200ms progressive",
-      "Weiskrantz, Elliott & Darlington 1971, Nature 230:598 — tickling oneself",
-      "Scientific American — Why can't a person tickle himself? (S-J Blakemore, UCL)",
-      "UCL News 2016 — Why can't I tickle myself?",
-      "BrainFacts.org 2021 — Unraveling the mysteries of tickling"
-    ]
-  },
-  {
-    "date": "2026-11-07",
-    "question": "아빠, 나 아침엔 더 커?",
-    "category": "과학·자연",
-    "media": "20261107-morning-height.mp4",
-    "sources": [
-      "Tyrrell, Reilly & Troup 1985, Spine 10(2):161 — mean circadian variation 19.3mm (1.1%), 54% lost in first hour",
-      "Leatt, Reilly & Troup 1986, BJSM 20(3):119 — circadian variation mean 14.4mm",
-      "Voss & Bailey 1997, Arch Dis Child 77:319 — schoolchildren, loss mostly in morning, none after ~6h",
-      "Arch Dis Child 78(4):395 letter (Univ. Liverpool) — overnight gain 19.3mm, disc water content",
-      "Meijer et al. 2024, Radiation Oncology 19:166 — pediatric spine length shortens over day, disc fluid loss",
-      "Jentzsch et al. 2020, Scientific Reports — discs up to ~2cm (~1% height) daily",
-      "Zhu et al. 2015, Korean J Radiol — lumbar disc height/T2 decrease morning→evening",
-      "NASA — Spinal Ultrasound Investigation (up to 3% taller, return on Earth)",
-      "Space.com / Scientific American 2013 — up to 3%, 1.8m → ~5cm, normal after months"
-    ]
-  },
-  {
-    "date": "2026-11-08",
-    "question": "아빠도 하품했다!",
-    "category": "과학·자연",
-    "media": "20261108-yawn-catch.mp4",
-    "sources": [
-      "Helt, Eigsti, Snyder & Fein 2010, Child Development 81(5):1620 — 120 children 1-6y; 0/20 age1, 1/20 age2, 7/20 age4, 8/20 age5-6 (UConn Today 2010; ScienceDaily 2010; Scientific American)",
-      "Cordoni, Favilli & Palagi 2021, Dev Psychobiol doi:10.1002/dev.22094 — contagion in preschoolers earlier than thought",
-      "Norscia et al. 2025, Human Nature doi:10.1007/s12110-025-09488-8 — toddlers 10-36 months in nursery",
-      "Norscia & Palagi 2011, PLoS ONE 6(12):e28472 — 109 adults, kin>friends>acquaintances>strangers, strangers longer latency",
-      "Provine 2005, American Scientist 93 — fetal yawning by end of first trimester; reading about yawning 30% vs 11%",
-      "Provine 1986, Ethology 72:109; Smithsonian — reading/thinking about yawns triggers yawns; function still unexplained",
-      "Duke Health 2014 (Bartholomew & Cirulli) — contagious yawning still largely unexplained",
-      "Joly-Mascheroni, Senju & Shepherd 2008, Biol Lett 4:446 — 21/29 dogs; National Geographic 2008; Romero 2013 PLOS ONE"
-    ]
-  },
-  {
-    "date": "2026-11-16",
-    "question": "아빠, 손이 할머니 손 됐어!",
-    "category": "과학·자연",
-    "media": "20261116-wrinkly-fingers.mp4",
-    "sources": [
-      "Lewis & Pickering 1936 Clinical Science (PopSci·Nature News 2013 경유)",
-      "O'Riain 1973 BMJ — wrinkle test of nerve function",
-      "Wilder-Smith & Chow 2003 Muscle & Nerve — vasoconstriction",
-      "Kareklas et al. 2013 Biology Letters / Newcastle Univ. press release (12% faster wet marbles)",
-      "Haseleu et al. 2014 PLoS ONE (재현 실패)",
-      "Laytin & German 2025 J Mech Behav Biomed Mater (Science News, SN Explores — same pattern)",
-      "The Conversation/Bond Univ. Curious Kids 2019 (hands & feet only, ~3.5–5 min)",
-      "Martimiano et al. 2025 Skin Pharmacol Physiol (onset 2.1–37 min)",
-      "The Scientist 2023 — The Science Behind Pruney Fingers"
-    ],
-    "note": "9/28 보류분(단면 영상)을 손·발·팔을 같은 물 속에 나란히 두는 장면으로 다시 만듦"
-  },
-  {
-    "date": "2026-11-16",
-    "question": "아빠, 거울 속 나는 왼손 들었어!",
-    "category": "과학·자연",
-    "media": "20261116-mirror-hand.mp4",
-    "sources": [
-      "https://www.sciencefocus.com/science/why-do-mirrors-reverse-left-and-right-not-up-and-down/",
-      "https://www.wtamu.edu/~cbaird/sq/2013/01/05/why-do-mirrors-flip-left-to-right-and-not-up-to-down/",
-      "https://math.ucr.edu/home/baez/physics/General/Mirrors/mirrors.html",
-      "https://openstax.org/books/university-physics-volume-3/pages/2-1-images-formed-by-plane-mirrors",
-      "https://phys.libretexts.org/Courses/Bowdoin_College/Phys1140%3A_Introductory_Physics_II%3A_Part_2/02%3A_Geometric_Optics_and_Image_Formation/2.02%3A_Images_Formed_by_Plane_Mirrors"
-    ]
-  },
-  {
-    "date": "2026-11-17",
-    "question": "아빠, 귤에 하얀 실 왜 있어?",
-    "category": "과학·자연",
-    "media": "20261117-tangerine-strings.mp4",
-    "sources": [
-      "https://www.pref.ehime.jp/uploaded/attachment/74172.pdf",
-      "https://irrec.ifas.ufl.edu/flcitrus/pdfs/short_course_and_workshop/maturity_and_packinghouse_procedures/Fruit_Structure_and_Composition.pdf",
-      "https://www.koreatimes.co.kr/amp/lifestyle/travel-food/20251122/should-you-remove-the-white-threads-on-tangerines-heres-what-experts-say",
-      "https://kormedi.com/2765088/",
-      "https://m.dailian.co.kr/news/view/1585722",
-      "https://www.maff.go.jp/j/pr/aff/1701/spe1_05.html",
-      "https://lady.khan.co.kr/cooking/article/202611060700001",
-      "https://organismalbio.biosci.gatech.edu/?p=6012"
-    ]
-  },
-  {
-    "date": "2026-11-18",
-    "question": "Rise and shine!",
-    "category": "appa say",
-    "media": "20261118-say-rise-and-shine.mp4",
-    "sources": [
-      "https://www.merriam-webster.com/dictionary/rise%20and%20shine",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/shine_1",
-      "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/rise_2",
-      "https://www.britannica.com/dictionary/sleepyhead",
-      "https://ilabs.uw.edu/wp-content/uploads/kuhl_2003_pnas_1532872100.pdf",
-      "https://pubmed.ncbi.nlm.nih.gov/12861072/",
-      "https://www.washington.edu/news/2003/02/20/researchers-learning-about-language-learning/"
-    ]
-  },
-  {
-    "date": "2026-11-18",
-    "question": "아빠, 달이 왜 낮에 나왔어?",
-    "category": "과학·자연",
-    "media": "20261118-daytime-moon.mp4",
-    "sources": [
-      "https://www.nasa.gov/feature/episode-19-we-asked-a-nasa-scientist-why-can-you-see-the-moon-during-the-day",
-      "https://www.livescience.com/why-moon-visible-daytime",
-      "https://www.sciencefocus.com/science/why-is-the-moon-sometimes-visible-during-the-day",
-      "https://www.nationalgeographicla.com/espacio/2023/08/por-que-la-luna-se-puede-ver-de-dia",
-      "https://science.nasa.gov/moon/moon-phases/",
-      "https://www.astronomy.com/science/why-doesnt-the-moonrise-time-change-by-the-same-amount-of-time-each-day/",
-      "https://www.kasi.re.kr/file/1764661238731_1.pdf",
-      "https://www.livescience.com/34335-see-stars-daytime.html"
-    ]
-  },
-  {
-    "date": "2026-11-19",
-    "question": "아빠, 여기서 바다 소리 나!",
-    "category": "과학·자연",
-    "media": "20261119-seashell-sound.mp4",
-    "sources": [
-      "https://www.livescience.com/33041-why-do-seashells-sound-like-the-ocean.html",
-      "https://alumni.berkeley.edu/california-magazine/july-august-2007-summer-travel-issue/glad-you-asked/",
-      "https://theconversation.com/curious-kids-why-do-seashells-sound-like-the-ocean-when-you-put-them-to-your-ear-188650",
-      "https://www.sciencefocus.com/the-human-body/why-does-the-inside-of-a-shell-sound-like-the-sea",
-      "https://www.sciencefocus.com/the-human-body/when-you-hold-a-shell-to-your-ear-what-makes-the-sea-sound/",
-      "https://askdruniverse.wsu.edu/2016/08/25/seashell/"
-    ]
-  },
-  {
-    "date": "2026-11-19",
-    "question": "Be gentle.",
-    "category": "appa say",
-    "media": "20261119-say-be-gentle.mp4",
-    "sources": [
-      "https://www.oxfordlearnersdictionaries.com/definition/english/gentle",
-      "https://www.dictionary.com/browse/gentle",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/nice",
-      "https://www.merriam-webster.com/dictionary/nice%20and",
-      "https://health.clevelandclinic.org/how-to-prepare-toddler-for-new-baby",
-      "https://www.zerotothree.org/resource/when-is-he-going-back-in-your-belly-how-to-help-older-siblings-adjust-to-the-new-baby/",
-      "https://www.texashealth.org/baby-care/Toddler/a-soft-touch",
-      "https://www.irishtimes.com/health/your-family/2026/06/01/my-toddler-constantly-touches-her-baby-sisters-head-sometimes-roughly/"
-    ]
-  },
-  {
-    "date": "2026-11-20",
-    "question": "아빠, 배에서 꼬르륵 했어!",
-    "category": "과학·자연",
-    "media": "20261120-tummy-rumble.mp4",
-    "note": "소재 6(초록 콧물)은 백혈구를 그려야 해서 영상 기준에 안 맞아 건너뜀",
-    "sources": [
-      "https://www.scientificamerican.com/article/why-does-your-stomach-gro/",
-      "https://www.livescience.com/health/food-diet/why-do-our-stomachs-growl",
-      "https://askdruniverse.wsu.edu/2025/10/16/tummy-rumble-im-hungry/",
-      "https://www.mentalfloss.com/science/biology/why-does-my-stomach-rumble-when-im-hungry",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137267",
-      "https://www.frontiersin.org/articles/10.3389/fphar.2010.00145/pdf",
-      "https://www.health.harvard.edu/blog/stomachs-growl-noses-run-and-yawning-is-contagious-ever-wonder-why-202307192955",
-      "https://www.merriam-webster.com/dictionary/borborygmus"
-    ]
-  },
-  {
-    "date": "2026-11-20",
-    "question": "Buckle up.",
-    "category": "appa say",
-    "media": "20261120-say-buckle-up.mp4",
-    "sources": [
-      "https://www.merriam-webster.com/dictionary/buckle%20up",
-      "https://www.dictionary.com/browse/buckle-up",
-      "https://www.vocabulary.com/dictionary/buckle%20up",
-      "https://news.mit.edu/2018/conversation-boost-childrens-brain-response-language-0214",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5945324",
-      "https://www.nhtsa.gov/vehicle-safety/car-seats-and-booster-seats"
-    ]
-  },
-  {
-    "date": "2026-11-21",
-    "question": "아빠, 나 멈췄는데 세상이 빙글빙글 돌아!",
-    "category": "과학·자연",
-    "media": "20261121-spin-dizzy.mp4",
-    "note": "소재 목록 바닥남(6번 초록 콧물은 11/20에 영상 기준으로 건너뜀) → 네 관문으로 직접 고름",
-    "sources": [
-      "https://www.imperial.ac.uk/news/130786/ballet-dancers-brains-adapt-stop-them/",
-      "https://www.sciencedaily.com/releases/2013/09/130926204725.htm",
-      "https://www.livescience.com/33828-spinning-dizzy.html",
-      "https://www.popsci.com/why-do-i-feel-dizzy-after-spinning",
-      "https://www.livescience.com/61795-ice-skating-brain-spin-dizzy.html",
-      "https://openbooks.lib.msu.edu/introneuroscience1/chapter/vestibular-system/",
-      "https://www.faasafety.gov/files/notices/2014/Dec/SA17_Spatial_Disorientation.pdf",
-      "https://teachmeanatomy.info/head/organs/ear/inner-ear/",
-      "https://www.kenhub.com/en/library/anatomy/inner-ear"
-    ]
-  },
-  {
-    "date": "2026-11-21",
-    "question": "Let's clean up.",
-    "category": "appa say",
-    "media": "20261121-say-lets-clean-up.mp4",
-    "sources": [
-      "https://www.oxfordlearnersdictionaries.com/definition/english/clean-up",
-      "https://www.oxfordlearnersdictionaries.com/definition/american_english/clean-up_2",
-      "https://www.merriam-webster.com/dictionary/cleanup",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/tidy_2",
-      "https://www.oxfordlearnersdictionaries.com/us/definition/english/tidy_1",
-      "https://developingchild.harvard.edu/wp-content/uploads/2024/10/HCDC_ServeReturn_for_Parents_Caregivers_2019.pdf",
-      "https://www.gse.harvard.edu/ideas/usable-knowledge/17/11/how-caregivers-can-boost-young-brains"
-    ]
-  },
-  {
-    "date": "2026-11-23",
-    "question": "아빠, 코 막으니까 딸기 맛이 없어졌어!",
-    "category": "과학·자연",
-    "media": "20261123-nose-pinch-flavor.mp4",
-    "sources": [
-      "https://www.nidcd.nih.gov/health/taste-disorders",
-      "https://www.nidcd.nih.gov/health/smell-disorders",
-      "https://www.scientificamerican.com/article/bring-science-home-jelly-bean-taste-smell/",
-      "https://fi.edu/en/jelly-bean-taste-test",
-      "https://news.cuanschutz.edu/news-stories/unlocking-the-science-of-taste",
-      "https://www.amnh.org/explore/ology/brain/taste-a-smell-test2/what-to-do",
-      "https://news.yale.edu/2015/11/09/yale-team-charts-flavor-s-favored-flow",
-      "https://www.ncbi.nlm.nih.gov/books/NBK10896/",
-      "https://goaskalice.columbia.edu/answered-questions/why-cant-i-taste-when-i-have-cold"
-    ]
-  },
-  {
-    "date": "2026-11-23",
-    "question": "Bath time!",
-    "category": "appa say",
-    "media": "20261123-say-bath-time.mp4",
-    "sources": [
-      "https://www.oxfordlearnersdictionaries.com/us/definition/english/bath_1",
-      "https://www.larousse.fr/dictionnaires/anglais-francais/bathtime/990863",
-      "https://www.britannica.com/dictionary/bath",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/nice",
-      "https://www.merriam-webster.com/dictionary/nice%20and",
-      "https://www.nhs.uk/start-for-life/baby/learning-to-talk/learning-to-talk-0-to-6-months/",
-      "https://extension.missouri.edu/publications/gh6136",
-      "https://www.nhs.uk/baby/caring-for-a-newborn/washing-and-bathing-your-baby/"
-    ]
-  },
-  {
-    "date": "2026-11-24",
-    "question": "아빠, 내 코 한쪽만 숨 쉬어!",
-    "category": "과학·자연",
-    "media": "20261124-one-nostril.mp4",
-    "note": "소재 목록 바닥남(1~11 모두 사용, 6번 초록 콧물은 영상 기준으로 건너뜀) → 네 관문으로 직접 고름. 3~6세는 비주기가 덜 규칙적이라는 연구가 있어 아이 장면은 옆으로 누운 자세 효과로 설명",
-    "sources": [
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5053491",
-      "https://pubmed.ncbi.nlm.nih.gov/609283/",
-      "https://health.clevelandclinic.org/why-do-i-sometimes-get-stuffy-in-one-nostril",
-      "https://www.livescience.com/breathing-nose-sides",
-      "https://www.henryford.com/blog/2026/06/why-your-nose-is-stuffy-at-night",
-      "https://utmb.edu/mdnews/podcast/episode/little-known-nose-facts",
-      "https://www.snuh.org/health/nMedInfo/nView.do?medid=BB000163",
-      "https://www.sciencefocus.com/the-human-body/why-does-only-one-nostril-get-blocked-when-youre-sick/",
-      "https://pubmed.ncbi.nlm.nih.gov/1481656/",
-      "https://scilit.com/publications/40d14bc0a17c958c2092e204bf3d63c7",
-      "https://scielo.br/j/rsbf/a/t9qfQwwpkXKQmCddFJJjfcb/abstract/?lang=en"
-    ]
-  },
-  {
-    "date": "2026-11-24",
-    "question": "Let's bundle up.",
-    "category": "appa say",
-    "media": "20261124-say-bundle-up.mp4",
-    "sources": [
-      "https://www.merriam-webster.com/dictionary/bundle%20up",
-      "https://britannica.com/dictionary/eb/word-of-the-day/2019/02/11",
-      "https://www.dictionary.com/browse/bundle-up",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/bundle_1",
-      "https://www.oxfordlearnersdictionaries.com/definition/english/zip-up",
-      "https://www.teachingenglish.org.uk/article/multi-word-verbs-learner-problems"
-    ]
-  }
+ {
+  "date": "2026-09-27",
+  "question": "아빠, 달이 왜 자꾸 우리 따라와?",
+  "category": "과학·자연",
+  "media": "moon_parallax.mp4",
+  "sources": [
+   "NASA Science — Moon: Earth-Moon distance about 384,400 km",
+   "시차(parallax) 원리 — 천문학 교과 개념"
+  ]
+ },
+ {
+  "date": "2026-09-27",
+  "question": "아빠, 나뭇잎이 왜 빨개지고 노래져?",
+  "category": "과학·자연",
+  "media": "20260927-autumn-leaves.mp4",
+  "sources": [
+   "USDA Forest Service — Science of Fall Colors (https://www.fs.usda.gov/visit/fall-colors/science-of-fall-colors)",
+   "Iowa State Univ. Extension — The Science Behind Fall Color (https://yardandgarden.extension.iastate.edu/how-to/science-behind-fall-color)",
+   "Ohio State Univ. Ohioline — Fall Color (https://ohioline.osu.edu/factsheet/anr-0145)",
+   "NASA Earthdata — Why Do Leaves Change Color? (https://www.earthdata.nasa.gov/learn/data-in-action/why-do-leaves-change-color)",
+   "UC ANR — Fall colors (https://ucanr.edu/blog/real-dirt/article/fall-colors)",
+   "Morton Arboretum — Seasonal needle drop (https://mortonarb.org/plant-and-protect/tree-plant-care/plant-care-resources/seasonal-needle-drop/)",
+   "경향신문 2023-11-22 은행잎 단풍·떨켜 (https://www.khan.co.kr/national/national-general/article/202311222120025)"
+  ]
+ },
+ {
+  "date": "2026-09-27",
+  "question": "아빠, 이 글자 누가 만들었어?",
+  "category": "문화",
+  "media": "20260928-hangeul-mouth.mp4",
+  "sources": [
+   "한국민족문화대백과사전 — 훈민정음 (encykorea.aks.ac.kr/Article/E0065805)",
+   "한국민족문화대백과사전 — 훈민정음 28자모 (E0074518)",
+   "국사편찬위원회 우리역사넷 — 제자의 원리",
+   "국립한글박물관 웹진 2018.10 — 한글날 유래",
+   "국립민속박물관 — 한글 (28자→24자)"
+  ],
+  "note": "2026-09-27 아이 말·입 모양 영상으로 다시 씀 (구 20260928-hangeul-shapes.mp4)"
+ },
+ {
+  "date": "2026-09-27",
+  "question": "아빠, 돈은 누가 만들어?",
+  "category": "생활 경제",
+  "media": "20260927-money-journey.mp4",
+  "sources": [
+   "한국은행 — 화폐는 어떻게 사람들 손에 들어올까 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10085714&menuNo=200387)",
+   "한국은행 — 한국은행법을 통해 살펴보는 우리나라 화폐 (https://www.bok.or.kr/portal/bbs/P0000547/view.do?nttId=10067510&menuNo=200387)",
+   "KTV — 제조에서 폐기까지 돈의 일생 (https://www.ktv.go.kr/content/view?content_id=310402)",
+   "프라임경제 — 조폐공사 부여 제지본부 르포 (https://www.newsprime.co.kr/news/article/?no=333871)",
+   "이투데이 — 조폐공사 경산 화폐본부 르포 (https://www.etoday.co.kr/news/view/1243651)",
+   "경향신문 2019-06-19 조폐공사 (https://www.khan.co.kr/economy/economy-general/article/201906192115005)",
+   "서울신문 2026-01-13 손상화폐 폐기·교환 기준 (https://www.seoul.co.kr/news/economy/finance/2026/01/13/20260113500273)",
+   "KTV 카드뉴스 — 손상 화폐 폐기 (https://m.ktv.go.kr/program/again/view?content_id=515740)",
+   "이데일리 2023 — 손상 지폐 대부분 소각 (https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02036886635774232)"
+  ]
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 귀뚜라미는 입으로 노래해?",
+  "category": "과학·자연",
+  "media": "20260928-cricket-song.mp4",
+  "sources": [
+   "Smithsonian — Why Don't Female Crickets Chirp?",
+   "WSU Ask Dr. Universe — Why do crickets make sound?",
+   "소년한국일보 — 귀뚜라미·방아깨비·여치·메뚜기",
+   "한국민족문화대백과사전 — 귀뚜라미",
+   "Old Farmer's Almanac / ScienceABC — Dolbear's law"
+  ]
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 내 손 봐! 왜 쭈글쭈글해졌어?",
+  "category": "과학·자연",
+  "media": "",
+  "sources": [
+   "Wilder-Smith 2003 Muscle & Nerve — Water-immersion wrinkling is due to vasoconstriction",
+   "Kareklas et al. 2013 Biology Letters — Water-induced finger wrinkles improve handling of wet objects",
+   "Haseleu et al. 2014 PLOS One (재현 실패)",
+   "Davis 2021 PLOS One (악력 감소 재지지)",
+   "Cleveland Clinic — Why water makes your skin look like a prune",
+   "Sci Rep 2022 — wrinkle onset ~3.5 min at 40°C"
+  ],
+  "topic_no": 1,
+  "note": "보류: 손가락 속 단면을 그려야 해서 영상 기준에 안 맞음 (고양이 눈으로 교체)"
+ },
+ {
+  "date": "2026-09-28",
+  "question": "엄마, 나 왜 자꾸 딸꾹 해? 안 멈춰!",
+  "category": "과학·자연",
+  "media": "",
+  "sources": [
+   "Cleveland Clinic — Hiccups",
+   "StatPearls NBK538225 — Hiccups",
+   "Merck Manual — Hiccups",
+   "UCL News 2019 — newborn hiccups & brain development",
+   "BJGP 2016 — hiccups review"
+  ],
+  "topic_no": 2,
+  "note": "보류: 몸속을 그려야 해서 영상 기준에 안 맞음 (2026-09-28 그림자로 교체)"
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 얘가 자꾸 나 따라와!",
+  "category": "과학·자연",
+  "media": "20260928-shadow-follows.mp4",
+  "sources": [
+   "NZ Science Learning Hub — Light and shadows",
+   "EBSCO Research Starters — Shadow",
+   "Exploratorium — Outdoor Shadows",
+   "California Academy of Sciences — Which way is north (shadow length)",
+   "UIUC Physics Van — multiple light sources, multiple shadows"
+  ],
+  "topic_no": 3
+ },
+ {
+  "date": "2026-09-28",
+  "question": "아빠, 고양이 눈에 불 켜졌어!",
+  "category": "과학·자연",
+  "media": "20260928-cat-eyes.mp4",
+  "sources": [
+   "Texas Parks & Wildlife — Eyeshine",
+   "The Conversation — Why do cats' eyes glow in the dark",
+   "Wikipedia — Tapetum lucidum / Cat senses",
+   "Panthera — Spooky science: glowing eyes of cats",
+   "Sci Rep 2018 — eyeshine only when dark-adapted"
+  ],
+  "topic_no": 14
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 빨대 부러졌어!",
+  "category": "과학·자연",
+  "media": "20260929-straw.mp4",
+  "sources": [
+   "IOP Spark — Reappearing coin",
+   "IOP — Vanishing coin"
+  ]
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 모기는 왜 나만 물어?",
+  "category": "과학·자연",
+  "media": "20260929-mosquito.mp4",
+  "sources": [
+   "Rockefeller Univ — Why mosquitoes bite some people more (2022)",
+   "Cell 2022 De Obaldia et al.",
+   "NIH Research Matters",
+   "EPA — Mosquito life cycle",
+   "Pitt Immunology — why bites itch"
+  ]
+ },
+ {
+  "date": "2026-09-29",
+  "question": "아빠, 풍선 날아갔어! 하늘 끝까지 가?",
+  "category": "과학·자연",
+  "media": "20260929-balloon.mp4",
+  "sources": [
+   "BalloonHQ — release study (Burchette)",
+   "UCAR — weather balloons",
+   "Sci Rep 2019 — marine debris seabirds",
+   "CPSC — latex balloon choking"
+  ]
+ },
+ {
+  "date": "2026-11-05",
+  "question": "아빠, 내 코가 보여!",
+  "category": "과학·자연",
+  "media": "20261105-nose-see.mp4",
+  "sources": [
+   "Live Science 2026-01 — Why don't you usually see your nose? (M. Webster, UNR)",
+   "IFLScience 2026-04 — binocular transparency (E. Quiroga Rodríguez review)",
+   "CEENTA — why can't I see my nose",
+   "Britannica — Human sensory reception (adaptation to clothing pressure)"
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "question": "아빠, 내가 하면 왜 안 간지러워?",
+  "category": "과학·자연",
+  "media": "20261106-self-tickle.mp4",
+  "sources": [
+   "Blakemore, Frith & Wolpert 1999, J Cogn Neurosci 11:551 — robot delay 0~300ms / rotation 0~90°",
+   "Blakemore, Wolpert & Frith 1998, Nature Neuroscience 1:635 — cerebellum, central cancellation; delay 0~200ms progressive",
+   "Weiskrantz, Elliott & Darlington 1971, Nature 230:598 — tickling oneself",
+   "Scientific American — Why can't a person tickle himself? (S-J Blakemore, UCL)",
+   "UCL News 2016 — Why can't I tickle myself?",
+   "BrainFacts.org 2021 — Unraveling the mysteries of tickling"
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "question": "아빠, 나 아침엔 더 커?",
+  "category": "과학·자연",
+  "media": "20261107-morning-height.mp4",
+  "sources": [
+   "Tyrrell, Reilly & Troup 1985, Spine 10(2):161 — mean circadian variation 19.3mm (1.1%), 54% lost in first hour",
+   "Leatt, Reilly & Troup 1986, BJSM 20(3):119 — circadian variation mean 14.4mm",
+   "Voss & Bailey 1997, Arch Dis Child 77:319 — schoolchildren, loss mostly in morning, none after ~6h",
+   "Arch Dis Child 78(4):395 letter (Univ. Liverpool) — overnight gain 19.3mm, disc water content",
+   "Meijer et al. 2024, Radiation Oncology 19:166 — pediatric spine length shortens over day, disc fluid loss",
+   "Jentzsch et al. 2020, Scientific Reports — discs up to ~2cm (~1% height) daily",
+   "Zhu et al. 2015, Korean J Radiol — lumbar disc height/T2 decrease morning→evening",
+   "NASA — Spinal Ultrasound Investigation (up to 3% taller, return on Earth)",
+   "Space.com / Scientific American 2013 — up to 3%, 1.8m → ~5cm, normal after months"
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "question": "아빠도 하품했다!",
+  "category": "과학·자연",
+  "media": "20261108-yawn-catch.mp4",
+  "sources": [
+   "Helt, Eigsti, Snyder & Fein 2010, Child Development 81(5):1620 — 120 children 1-6y; 0/20 age1, 1/20 age2, 7/20 age4, 8/20 age5-6 (UConn Today 2010; ScienceDaily 2010; Scientific American)",
+   "Cordoni, Favilli & Palagi 2021, Dev Psychobiol doi:10.1002/dev.22094 — contagion in preschoolers earlier than thought",
+   "Norscia et al. 2025, Human Nature doi:10.1007/s12110-025-09488-8 — toddlers 10-36 months in nursery",
+   "Norscia & Palagi 2011, PLoS ONE 6(12):e28472 — 109 adults, kin>friends>acquaintances>strangers, strangers longer latency",
+   "Provine 2005, American Scientist 93 — fetal yawning by end of first trimester; reading about yawning 30% vs 11%",
+   "Provine 1986, Ethology 72:109; Smithsonian — reading/thinking about yawns triggers yawns; function still unexplained",
+   "Duke Health 2014 (Bartholomew & Cirulli) — contagious yawning still largely unexplained",
+   "Joly-Mascheroni, Senju & Shepherd 2008, Biol Lett 4:446 — 21/29 dogs; National Geographic 2008; Romero 2013 PLOS ONE"
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "question": "아빠, 손이 할머니 손 됐어!",
+  "category": "과학·자연",
+  "media": "20261116-wrinkly-fingers.mp4",
+  "sources": [
+   "Lewis & Pickering 1936 Clinical Science (PopSci·Nature News 2013 경유)",
+   "O'Riain 1973 BMJ — wrinkle test of nerve function",
+   "Wilder-Smith & Chow 2003 Muscle & Nerve — vasoconstriction",
+   "Kareklas et al. 2013 Biology Letters / Newcastle Univ. press release (12% faster wet marbles)",
+   "Haseleu et al. 2014 PLoS ONE (재현 실패)",
+   "Laytin & German 2025 J Mech Behav Biomed Mater (Science News, SN Explores — same pattern)",
+   "The Conversation/Bond Univ. Curious Kids 2019 (hands & feet only, ~3.5–5 min)",
+   "Martimiano et al. 2025 Skin Pharmacol Physiol (onset 2.1–37 min)",
+   "The Scientist 2023 — The Science Behind Pruney Fingers"
+  ],
+  "note": "9/28 보류분(단면 영상)을 손·발·팔을 같은 물 속에 나란히 두는 장면으로 다시 만듦"
+ },
+ {
+  "date": "2026-11-16",
+  "question": "아빠, 거울 속 나는 왼손 들었어!",
+  "category": "과학·자연",
+  "media": "20261116-mirror-hand.mp4",
+  "sources": [
+   "https://www.sciencefocus.com/science/why-do-mirrors-reverse-left-and-right-not-up-and-down/",
+   "https://www.wtamu.edu/~cbaird/sq/2013/01/05/why-do-mirrors-flip-left-to-right-and-not-up-to-down/",
+   "https://math.ucr.edu/home/baez/physics/General/Mirrors/mirrors.html",
+   "https://openstax.org/books/university-physics-volume-3/pages/2-1-images-formed-by-plane-mirrors",
+   "https://phys.libretexts.org/Courses/Bowdoin_College/Phys1140%3A_Introductory_Physics_II%3A_Part_2/02%3A_Geometric_Optics_and_Image_Formation/2.02%3A_Images_Formed_by_Plane_Mirrors"
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "question": "아빠, 귤에 하얀 실 왜 있어?",
+  "category": "과학·자연",
+  "media": "20261117-tangerine-strings.mp4",
+  "sources": [
+   "https://www.pref.ehime.jp/uploaded/attachment/74172.pdf",
+   "https://irrec.ifas.ufl.edu/flcitrus/pdfs/short_course_and_workshop/maturity_and_packinghouse_procedures/Fruit_Structure_and_Composition.pdf",
+   "https://www.koreatimes.co.kr/amp/lifestyle/travel-food/20251122/should-you-remove-the-white-threads-on-tangerines-heres-what-experts-say",
+   "https://kormedi.com/2765088/",
+   "https://m.dailian.co.kr/news/view/1585722",
+   "https://www.maff.go.jp/j/pr/aff/1701/spe1_05.html",
+   "https://lady.khan.co.kr/cooking/article/202611060700001",
+   "https://organismalbio.biosci.gatech.edu/?p=6012"
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "question": "Rise and shine!",
+  "category": "appa say",
+  "media": "20261118-say-rise-and-shine.mp4",
+  "sources": [
+   "https://www.merriam-webster.com/dictionary/rise%20and%20shine",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/shine_1",
+   "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/rise_2",
+   "https://www.britannica.com/dictionary/sleepyhead",
+   "https://ilabs.uw.edu/wp-content/uploads/kuhl_2003_pnas_1532872100.pdf",
+   "https://pubmed.ncbi.nlm.nih.gov/12861072/",
+   "https://www.washington.edu/news/2003/02/20/researchers-learning-about-language-learning/"
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "question": "아빠, 달이 왜 낮에 나왔어?",
+  "category": "과학·자연",
+  "media": "20261118-daytime-moon.mp4",
+  "sources": [
+   "https://www.nasa.gov/feature/episode-19-we-asked-a-nasa-scientist-why-can-you-see-the-moon-during-the-day",
+   "https://www.livescience.com/why-moon-visible-daytime",
+   "https://www.sciencefocus.com/science/why-is-the-moon-sometimes-visible-during-the-day",
+   "https://www.nationalgeographicla.com/espacio/2023/08/por-que-la-luna-se-puede-ver-de-dia",
+   "https://science.nasa.gov/moon/moon-phases/",
+   "https://www.astronomy.com/science/why-doesnt-the-moonrise-time-change-by-the-same-amount-of-time-each-day/",
+   "https://www.kasi.re.kr/file/1764661238731_1.pdf",
+   "https://www.livescience.com/34335-see-stars-daytime.html"
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "question": "아빠, 여기서 바다 소리 나!",
+  "category": "과학·자연",
+  "media": "20261119-seashell-sound.mp4",
+  "sources": [
+   "https://www.livescience.com/33041-why-do-seashells-sound-like-the-ocean.html",
+   "https://alumni.berkeley.edu/california-magazine/july-august-2007-summer-travel-issue/glad-you-asked/",
+   "https://theconversation.com/curious-kids-why-do-seashells-sound-like-the-ocean-when-you-put-them-to-your-ear-188650",
+   "https://www.sciencefocus.com/the-human-body/why-does-the-inside-of-a-shell-sound-like-the-sea",
+   "https://www.sciencefocus.com/the-human-body/when-you-hold-a-shell-to-your-ear-what-makes-the-sea-sound/",
+   "https://askdruniverse.wsu.edu/2016/08/25/seashell/"
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "question": "Be gentle.",
+  "category": "appa say",
+  "media": "20261119-say-be-gentle.mp4",
+  "sources": [
+   "https://www.oxfordlearnersdictionaries.com/definition/english/gentle",
+   "https://www.dictionary.com/browse/gentle",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/nice",
+   "https://www.merriam-webster.com/dictionary/nice%20and",
+   "https://health.clevelandclinic.org/how-to-prepare-toddler-for-new-baby",
+   "https://www.zerotothree.org/resource/when-is-he-going-back-in-your-belly-how-to-help-older-siblings-adjust-to-the-new-baby/",
+   "https://www.texashealth.org/baby-care/Toddler/a-soft-touch",
+   "https://www.irishtimes.com/health/your-family/2026/06/01/my-toddler-constantly-touches-her-baby-sisters-head-sometimes-roughly/"
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "question": "아빠, 배에서 꼬르륵 했어!",
+  "category": "과학·자연",
+  "media": "20261120-tummy-rumble.mp4",
+  "note": "소재 6(초록 콧물)은 백혈구를 그려야 해서 영상 기준에 안 맞아 건너뜀",
+  "sources": [
+   "https://www.scientificamerican.com/article/why-does-your-stomach-gro/",
+   "https://www.livescience.com/health/food-diet/why-do-our-stomachs-growl",
+   "https://askdruniverse.wsu.edu/2025/10/16/tummy-rumble-im-hungry/",
+   "https://www.mentalfloss.com/science/biology/why-does-my-stomach-rumble-when-im-hungry",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137267",
+   "https://www.frontiersin.org/articles/10.3389/fphar.2010.00145/pdf",
+   "https://www.health.harvard.edu/blog/stomachs-growl-noses-run-and-yawning-is-contagious-ever-wonder-why-202307192955",
+   "https://www.merriam-webster.com/dictionary/borborygmus"
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "question": "Buckle up.",
+  "category": "appa say",
+  "media": "20261120-say-buckle-up.mp4",
+  "sources": [
+   "https://www.merriam-webster.com/dictionary/buckle%20up",
+   "https://www.dictionary.com/browse/buckle-up",
+   "https://www.vocabulary.com/dictionary/buckle%20up",
+   "https://news.mit.edu/2018/conversation-boost-childrens-brain-response-language-0214",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5945324",
+   "https://www.nhtsa.gov/vehicle-safety/car-seats-and-booster-seats"
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "question": "아빠, 나 멈췄는데 세상이 빙글빙글 돌아!",
+  "category": "과학·자연",
+  "media": "20261121-spin-dizzy.mp4",
+  "note": "소재 목록 바닥남(6번 초록 콧물은 11/20에 영상 기준으로 건너뜀) → 네 관문으로 직접 고름",
+  "sources": [
+   "https://www.imperial.ac.uk/news/130786/ballet-dancers-brains-adapt-stop-them/",
+   "https://www.sciencedaily.com/releases/2013/09/130926204725.htm",
+   "https://www.livescience.com/33828-spinning-dizzy.html",
+   "https://www.popsci.com/why-do-i-feel-dizzy-after-spinning",
+   "https://www.livescience.com/61795-ice-skating-brain-spin-dizzy.html",
+   "https://openbooks.lib.msu.edu/introneuroscience1/chapter/vestibular-system/",
+   "https://www.faasafety.gov/files/notices/2014/Dec/SA17_Spatial_Disorientation.pdf",
+   "https://teachmeanatomy.info/head/organs/ear/inner-ear/",
+   "https://www.kenhub.com/en/library/anatomy/inner-ear"
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "question": "Let's clean up.",
+  "category": "appa say",
+  "media": "20261121-say-lets-clean-up.mp4",
+  "sources": [
+   "https://www.oxfordlearnersdictionaries.com/definition/english/clean-up",
+   "https://www.oxfordlearnersdictionaries.com/definition/american_english/clean-up_2",
+   "https://www.merriam-webster.com/dictionary/cleanup",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/tidy_2",
+   "https://www.oxfordlearnersdictionaries.com/us/definition/english/tidy_1",
+   "https://developingchild.harvard.edu/wp-content/uploads/2024/10/HCDC_ServeReturn_for_Parents_Caregivers_2019.pdf",
+   "https://www.gse.harvard.edu/ideas/usable-knowledge/17/11/how-caregivers-can-boost-young-brains"
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "question": "아빠, 코 막으니까 딸기 맛이 없어졌어!",
+  "category": "과학·자연",
+  "media": "20261123-nose-pinch-flavor.mp4",
+  "sources": [
+   "https://www.nidcd.nih.gov/health/taste-disorders",
+   "https://www.nidcd.nih.gov/health/smell-disorders",
+   "https://www.scientificamerican.com/article/bring-science-home-jelly-bean-taste-smell/",
+   "https://fi.edu/en/jelly-bean-taste-test",
+   "https://news.cuanschutz.edu/news-stories/unlocking-the-science-of-taste",
+   "https://www.amnh.org/explore/ology/brain/taste-a-smell-test2/what-to-do",
+   "https://news.yale.edu/2015/11/09/yale-team-charts-flavor-s-favored-flow",
+   "https://www.ncbi.nlm.nih.gov/books/NBK10896/",
+   "https://goaskalice.columbia.edu/answered-questions/why-cant-i-taste-when-i-have-cold"
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "question": "Bath time!",
+  "category": "appa say",
+  "media": "20261123-say-bath-time.mp4",
+  "sources": [
+   "https://www.oxfordlearnersdictionaries.com/us/definition/english/bath_1",
+   "https://www.larousse.fr/dictionnaires/anglais-francais/bathtime/990863",
+   "https://www.britannica.com/dictionary/bath",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/nice",
+   "https://www.merriam-webster.com/dictionary/nice%20and",
+   "https://www.nhs.uk/start-for-life/baby/learning-to-talk/learning-to-talk-0-to-6-months/",
+   "https://extension.missouri.edu/publications/gh6136",
+   "https://www.nhs.uk/baby/caring-for-a-newborn/washing-and-bathing-your-baby/"
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "question": "아빠, 내 코 한쪽만 숨 쉬어!",
+  "category": "과학·자연",
+  "media": "20261124-one-nostril.mp4",
+  "note": "소재 목록 바닥남(1~11 모두 사용, 6번 초록 콧물은 영상 기준으로 건너뜀) → 네 관문으로 직접 고름. 3~6세는 비주기가 덜 규칙적이라는 연구가 있어 아이 장면은 옆으로 누운 자세 효과로 설명",
+  "sources": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5053491",
+   "https://pubmed.ncbi.nlm.nih.gov/609283/",
+   "https://health.clevelandclinic.org/why-do-i-sometimes-get-stuffy-in-one-nostril",
+   "https://www.livescience.com/breathing-nose-sides",
+   "https://www.henryford.com/blog/2026/06/why-your-nose-is-stuffy-at-night",
+   "https://utmb.edu/mdnews/podcast/episode/little-known-nose-facts",
+   "https://www.snuh.org/health/nMedInfo/nView.do?medid=BB000163",
+   "https://www.sciencefocus.com/the-human-body/why-does-only-one-nostril-get-blocked-when-youre-sick/",
+   "https://pubmed.ncbi.nlm.nih.gov/1481656/",
+   "https://scilit.com/publications/40d14bc0a17c958c2092e204bf3d63c7",
+   "https://scielo.br/j/rsbf/a/t9qfQwwpkXKQmCddFJJjfcb/abstract/?lang=en"
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "question": "Let's bundle up.",
+  "category": "appa say",
+  "media": "20261124-say-bundle-up.mp4",
+  "sources": [
+   "https://www.merriam-webster.com/dictionary/bundle%20up",
+   "https://britannica.com/dictionary/eb/word-of-the-day/2019/02/11",
+   "https://www.dictionary.com/browse/bundle-up",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/bundle_1",
+   "https://www.oxfordlearnersdictionaries.com/definition/english/zip-up",
+   "https://www.teachingenglish.org.uk/article/multi-word-verbs-learner-problems"
+  ]
+ }
 ]
