@@ -473,5 +473,20 @@
    "https://www.oxfordlearnersdictionaries.com/definition/english/minute1_1",
    "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/minute1_1"
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "question": "아빠, 벌써 깜깜해! 해님 벌써 자러 갔어?",
+  "category": "과학·자연",
+  "media": "20261125-early-sunset.mp4",
+  "sources": [
+   "https://aa.usno.navy.mil/faq/rs_solstices",
+   "https://www.scientificamerican.com/article/the-winter-solstice-has-a-surprising-secret/",
+   "https://www.timeanddate.com/astronomy/earliest-sunset.html",
+   "https://www.segye.com/newsView/20161124003095",
+   "https://m.seoul.co.kr/news/2023/12/18/20231218500117",
+   "https://www.bom.gov.au/news-and-media/solstices-equinoxes-and-the-seasons"
+  ],
+  "note": "소재 목록 바닥남 → 네 관문으로 직접 고름(가장 일찍 해 지는 날은 동지가 아니라 12월 초). 서울 시각은 NOAA 계산식으로 확인"
  }
 ]
